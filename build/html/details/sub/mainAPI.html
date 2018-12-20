@@ -1,0 +1,1077 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>主要数据类型说明 &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>主要数据类型说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/mainAPI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>主要数据类型说明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>模组参数枚举类型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>参数类型定义:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">enum</span> <span class="p">{</span>
+        <span class="n">PARAM_DEV_MODE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">PARAM_MOD_FREQ</span><span class="p">,</span>
+
+        <span class="n">PARAM_INFO_VENDOR</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_PRODUCT</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_CAPABILITY</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_SERIAL</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_VERSION</span><span class="p">,</span>   <span class="o">//</span><span class="n">HW</span><span class="o">&amp;</span><span class="n">SW</span> <span class="n">info</span>
+        <span class="n">PARAM_INFO_SENSOR</span><span class="p">,</span>    <span class="o">//</span><span class="n">part</span> <span class="n">version</span><span class="p">,</span> <span class="n">chip</span> <span class="nb">id</span><span class="p">,</span> <span class="n">wafer</span> <span class="nb">id</span>
+
+        <span class="n">PARAM_INFO_CALIB</span><span class="p">,</span>     <span class="o">//</span><span class="n">get</span> <span class="n">calibration</span> <span class="n">info</span>
+        <span class="n">PARAM_ROI</span><span class="p">,</span>            <span class="o">//</span><span class="n">ROI</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_FRAME_FORMAT</span><span class="p">,</span>   <span class="o">//</span><span class="n">frame</span> <span class="n">information</span><span class="p">,</span><span class="n">eg</span><span class="o">.</span><span class="n">dcs1for</span> <span class="n">gray</span><span class="p">,</span><span class="mi">4</span> <span class="n">dcs</span> <span class="k">for</span> <span class="n">distance</span>
+        <span class="n">PARAM_ILLUM_POWER</span><span class="p">,</span>    <span class="o">//</span><span class="n">illumination</span> <span class="n">power</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_FRAME_RATE</span><span class="p">,</span>     <span class="o">//</span><span class="n">frame</span> <span class="n">rate</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_INTG_TIME</span><span class="p">,</span>      <span class="o">//</span><span class="n">integration</span> <span class="n">time</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_PHASE_CORR</span><span class="p">,</span>     <span class="o">//</span><span class="n">phase</span> <span class="n">offset</span> <span class="n">correction</span>
+                                                  <span class="o">//</span><span class="n">PARAM_SWITCH_MODE</span><span class="p">,</span> <span class="o">/*&gt;</span><span class="n">swith</span> <span class="n">mode</span> <span class="n">use</span><span class="p">[</span><span class="n">gray</span><span class="p">,</span><span class="mi">3</span><span class="n">d</span><span class="p">]</span><span class="o">*/</span>
+        <span class="n">PARAM_TEMP</span><span class="p">,</span>           <span class="o">//&lt;</span><span class="n">Get</span> <span class="n">camera</span> <span class="n">temperature</span><span class="o">--------------</span>
+        <span class="n">PARAM_HDR_INTG_TIME</span><span class="p">,</span>  <span class="o">//&lt;</span><span class="n">Setting</span> <span class="n">HDR</span> <span class="n">integration</span> <span class="n">time</span> <span class="n">param</span>
+        <span class="n">PARAM_SYNC_DELAY</span><span class="p">,</span>     <span class="o">//&lt;</span><span class="n">delay</span> <span class="n">ms</span> <span class="k">for</span> <span class="n">sync</span> <span class="n">use</span>
+        <span class="n">PARAM_ENUM_COUNT</span><span class="p">,</span>
+<span class="p">}</span><span class="n">dmcam_dev_param_e</span><span class="p">;</span>
+</pre></div>
+</div>
+<table border="1" class="colwidths-given docutils" id="id8">
+<caption><span class="caption-text">模组参数枚举类型说明</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="38%" />
+<col width="25%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数名</th>
+<th class="head">取值范围</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>PARAM_DEV_MODE</td>
+<td>不用设置</td>
+<td>用户无需设置此参数</td>
+</tr>
+<tr class="row-odd"><td>PARAM_MOD_FREQ</td>
+<td>12M、24M、36M 单位Hz</td>
+<td>频率要对应校准数据</td>
+</tr>
+<tr class="row-even"><td>PARAM_INFO_VENDOR</td>
+<td>不用设置</td>
+<td>默认Digtal Miracle</td>
+</tr>
+<tr class="row-odd"><td>PARAM_INFO_PRODUCT</td>
+<td>不用设置</td>
+<td>模组名称，如TC-E2-1.0</td>
+</tr>
+<tr class="row-even"><td>PARAM_INFO_CAPABLITY</td>
+<td>不用设置</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PARAM_INFO_SERIAL</td>
+<td>不用设置</td>
+<td>3个uint32_t类型数字</td>
+</tr>
+<tr class="row-even"><td>PARAM_INFO_VERSION</td>
+<td>不用设置</td>
+<td>包括软件和硬件版本信息</td>
+</tr>
+<tr class="row-odd"><td>PARAM_INFO_CALIB</td>
+<td>不用设置</td>
+<td>包含校准相关信息</td>
+</tr>
+<tr class="row-even"><td>PARAM_ROI</td>
+<td>320*240 320*160</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PARAM_FRAME_FORMART</td>
+<td>2,4</td>
+<td>默认模式是2，运动模式1需设置为4</td>
+</tr>
+<tr class="row-even"><td>PARAM_ILLUM_POWER</td>
+<td>暂不用设置</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>PARAM_FRAME_RATE</td>
+<td>1-36</td>
+<td>通常取值5、10、20、30</td>
+</tr>
+<tr class="row-even"><td>PARAM_INTG_TIME</td>
+<td>0us-1500us</td>
+<td>如果超过最大范围，对模组可能造成损坏</td>
+</tr>
+<tr class="row-odd"><td>PARAM_PHASE_CORR</td>
+<td>暂不支持设置</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>PARAM_TEMP</td>
+<td>只读</td>
+<td>分别读取传感器上下面左右部分温度和灯板的温度</td>
+</tr>
+<tr class="row-odd"><td>PARAM_HDR_INTG_TIME</td>
+<td>0-1500</td>
+<td>取值同PARAM_INTG_TIME</td>
+</tr>
+<tr class="row-even"><td>PARAM_SYNC_DELAY</td>
+<td>0ms-6ms</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>模组滤波类型说明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>用于设置模组的多种滤波功能，如深度滤波、自动曝光时间，滤波类型定义如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">enum</span> <span class="p">{</span>
+        <span class="n">DMCAM_FILTER_ID_LEN_CALIB</span><span class="p">,</span>    <span class="o">/**&gt;</span><span class="n">lens</span> <span class="n">calibration</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_PIXEL_CALIB</span><span class="p">,</span>  <span class="o">/**&gt;</span><span class="n">pixel</span> <span class="n">calibration</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_MEDIAN</span><span class="p">,</span>       <span class="o">/**&gt;</span><span class="n">Median</span> <span class="nb">filter</span> <span class="k">for</span> <span class="n">distance</span> <span class="n">data</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_RESERVED</span><span class="p">,</span>        <span class="o">/**&gt;</span><span class="n">Gauss</span> <span class="nb">filter</span> <span class="k">for</span> <span class="n">distance</span> <span class="n">data</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_AMP</span><span class="p">,</span>          <span class="o">/**&gt;</span><span class="n">Amplitude</span> <span class="nb">filter</span> <span class="n">control</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_AUTO_INTG</span><span class="p">,</span>    <span class="o">/**&gt;</span><span class="n">auto</span> <span class="n">integration</span> <span class="nb">filter</span> <span class="n">enable</span> <span class="p">:</span> <span class="n">use</span> <span class="n">sat_ratio</span> <span class="n">to</span> <span class="n">adjust</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_SYNC_DELAY</span><span class="p">,</span>   <span class="o">/**&gt;</span> <span class="n">sync</span> <span class="n">delay</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_TEMP_MONITOR</span><span class="p">,</span> <span class="o">/**&gt;</span><span class="n">temperature</span> <span class="n">monitor</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_HDR</span><span class="p">,</span>          <span class="o">/**&gt;</span><span class="n">HDR</span> <span class="n">mode</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_OFFSET</span><span class="p">,</span>       <span class="o">/**&gt;</span> <span class="nb">set</span> <span class="n">offset</span> <span class="k">for</span> <span class="n">calc</span> <span class="n">distance</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_SPORT_MODE</span><span class="p">,</span>   <span class="o">/**&gt;</span> <span class="nb">set</span> <span class="n">sport</span> <span class="n">mode</span> <span class="o">*/</span>
+        <span class="o">//-------------------</span>
+        <span class="n">DMCAM_FILTER_CNT</span><span class="p">,</span>
+<span class="p">}</span><span class="n">dmcam_filter_id_e</span><span class="p">;</span>
+</pre></div>
+</div>
+<table border="1" class="colwidths-given docutils" id="id9">
+<caption><span class="caption-text">模组滤波类型说明</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">滤波功能ID</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DMCAM_FILTER_ID_LEN_CALIB</td>
+<td>镜头校准ID</td>
+</tr>
+<tr class="row-odd"><td>DMCAM_FILTER_ID_PIXEL_CALIB</td>
+<td>像素校准ID</td>
+</tr>
+<tr class="row-even"><td>DMCAM_FILTER_ID_MEDIAN</td>
+<td>深度滤波ID</td>
+</tr>
+<tr class="row-odd"><td>DMCAM_FILTER_ID_AMP</td>
+<td>最小幅值滤波ID</td>
+</tr>
+<tr class="row-even"><td>DMCAM_FILTER_ID_AUTO_INTG</td>
+<td>自动曝光ID</td>
+</tr>
+<tr class="row-odd"><td>DMCAM_FILTER_ID_SYNC_DELAY</td>
+<td>软件多模组串扰ID</td>
+</tr>
+<tr class="row-even"><td>DMCAM_FILTER_ID_HDR</td>
+<td>HDR功能ID</td>
+</tr>
+<tr class="row-odd"><td>DMCAM_FILTER_ID_OFFSET</td>
+<td>距离偏移功能ID</td>
+</tr>
+<tr class="row-even"><td>DMCAM_FILTER_ID_SPORT_MODE</td>
+<td>运动模式功能ID
+非运动模式:全分辨率，4xDCS,18ms模糊
+运动模式0：垂直分辨率减半，4xDCS,6ms模糊
+运动模式1：垂直分辨率减半，2xDCS,无模糊,噪声高(竖条纹)
+运动模式2：全分辨率，2xDCS,6ms模糊，噪声高(竖条纹)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="api">
+<h1>主要API接口说明<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id4">
+<h2>模组连接相关接口<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dmcam-init">
+<h3>dmcam_init<a class="headerlink" href="#dmcam-init" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">dmcam_init(const</span> <span class="pre">char</span> <span class="pre">*log_fname)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>模组初始化，dmcam层初始化</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>log_fname[in]:指定dmcam的日志文件名</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-dev-list">
+<h3>dmcam_dev_list<a class="headerlink" href="#dmcam-dev-list" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_dev_list(dmcam_dev_t</span> <span class="pre">*dev_list,</span> <span class="pre">int</span> <span class="pre">dev_list_num)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>获取模组设备列表</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev_list[in]:设备列表</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>dev_list_num[in]：设备列表容量</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>设备个数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-dev-open">
+<h3>dmcam_dev_open<a class="headerlink" href="#dmcam-dev-open" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam_dev_t*</span> <span class="pre">dmcam_dev_open(dmcam_dev_t</span> <span class="pre">*dev)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>打开指定的dmcam设备，如果未指定，尝试打开设备列表的第一个选项</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>dev[in]:指定的dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>如果NULL:设备打开失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-dev-open-by-fd">
+<h3>dmcam_dev_open_by_fd<a class="headerlink" href="#dmcam-dev-open-by-fd" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam_dev_t*</span> <span class="pre">dmcam_dev_open_by_fd(int</span> <span class="pre">fd)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>用指定的fd打开指定的dmcam设备，在Android的USB设备中使用</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>fd[in]:指定的fd</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>如果NULL:设备打开失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-dev-close">
+<h3>dmcam_dev_close<a class="headerlink" href="#dmcam-dev-close" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">void*</span> <span class="pre">dmcam_dev_close(dmcam_dev_t</span> <span class="pre">*dev)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>关闭指定的dmcam设备</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>dev[in]:指定的dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-uninit">
+<h3>dmcam_uninit<a class="headerlink" href="#dmcam-uninit" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">dmcam_uninit(void)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>模组dmcam层复位</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>无</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>模组参数设置相关接口<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dmcam-param-batch-set">
+<h3>dmcam_param_batch_set<a class="headerlink" href="#dmcam-param-batch-set" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam_param_batch_set(dmcam_dev_t*dev,const</span> <span class="pre">dmcam_param_item_t</span> <span class="pre">*param_items,</span> <span class="pre">int</span> <span class="pre">item_cnt)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>通用批量参数设置</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>param_items[in]:要写参数条目，支持批量设置</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>item_cnt[in]:参数条目中参数个数</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>true:成功 false:失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-param-batch-get">
+<h3>dmcam_param_batch_get<a class="headerlink" href="#dmcam-param-batch-get" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam_param_batch_get(dmcam_dev_t*dev,const</span> <span class="pre">dmcam_param_item_t</span> <span class="pre">*param_items,</span> <span class="pre">int</span> <span class="pre">item_cnt)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>通用批量参数设置</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>param_items[out]:读取的参数条目，支持多个</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>item_cnt[in]:参数条目中参数个数</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>true:成功 false:失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>模组数据采集相关接口<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dmcam-cap-set-frame-buffer">
+<h3>dmcam_cap_set_frame_buffer<a class="headerlink" href="#dmcam-cap-set-frame-buffer" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">dmcam_cap_set_frame_buffer(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">uint8_t</span> <span class="pre">*frame_buf,</span> <span class="pre">uint32_t</span> <span class="pre">frame_buf_size)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>设置帧缓冲区</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>frame_buf[in]:用来存放frame数据的buffer，如果未指定，根据frame_buf_size在内部自动分配</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>frame_buf_size[in]:frame_buffer的大小</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>true:成功 false:失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-cap-set-callback-on-frame-ready">
+<h3>dmcam_cap_set_callback_on_frame_ready<a class="headerlink" href="#dmcam-cap-set-callback-on-frame-ready" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">dmcam_cap_set_callback_on_frame_ready(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">dmcam_cap_frdy_f</span> <span class="pre">on_cap_frdy)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>注册一帧接收完成回调函数</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>cb[in]:帧结束回调函数</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-cap-set-callback-on-error">
+<h3>dmcam_cap_set_callback_on_error<a class="headerlink" href="#dmcam-cap-set-callback-on-error" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">dmcam_cap_set_callback_on_error(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">dmcam_cap_err_f</span> <span class="pre">on_cap_err)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>注册帧错误回调函数</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>cb[in]:帧错误回调函数</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-cap-start">
+<h3>dmcam_cap_start<a class="headerlink" href="#dmcam-cap-start" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">dmcam_cap_start(dmcam_dev_t</span> <span class="pre">*dev)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>启动采集</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>true:成功 false:失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-cap-get-frames">
+<h3>dmcam_cap_get_frames<a class="headerlink" href="#dmcam-cap-get-frames" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_cap_get_frames(dmcam_dev_t</span> <span class="pre">*dev,uint32_t</span> <span class="pre">frame_num,uint8_t*frame_data,uint32_tframe_dlen,</span> <span class="pre">dmcam_frame_t</span> <span class="pre">*first_frame_info)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>获取指定数目帧数据，并填入用户指定的缓冲</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>frame_num[in]：采集的帧数</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>frame_data[out]:帧数据</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>frame_dlen[in]:帧数据缓冲长度</td>
+</tr>
+<tr class="row-even"><td>函数参数5</td>
+<td>frame_info[out]:第一帧信息</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>大于0表示采集到的帧数目 小于0表示出错</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-cap-stop">
+<h3>dmcam_cap_stop<a class="headerlink" href="#dmcam-cap-stop" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">dmcam_cap_stop(dmcam_dev_t</span> <span class="pre">*dev)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>停止采集</td>
+</tr>
+<tr class="row-even"><td>函数参数</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>true:成功 false:失败</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>采集数据处理相关接口<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dmcam-frame-get-dist-f32">
+<h3>dmcam_frame_get_dist_f32<a class="headerlink" href="#dmcam-frame-get-dist-f32" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam_frame_get_dist_f32(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">float</span> <span class="pre">*dst,</span> <span class="pre">int</span> <span class="pre">dst_len,uint8_t</span> <span class="pre">*src,</span> <span class="pre">int</span> <span class="pre">src_len,</span> <span class="pre">const</span> <span class="pre">dmcam_frame_info_t</span> <span class="pre">*finfo)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>从帧获得的原始数据转换成距离数据</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>dst[out]:距离数据，单位 m，如果过曝光则是65.5，曝光不足65.3</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>dst_len[in]：距离长度数据</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>src[in]:原始数据</td>
+</tr>
+<tr class="row-even"><td>函数参数5</td>
+<td>src_len[in]:原始数据长度，字节</td>
+</tr>
+<tr class="row-odd"><td>函数参数6</td>
+<td>finfo[in]:原始帧信息</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>返回距离数据个数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-frame-get-gray">
+<h3>dmcam_frame_get_gray<a class="headerlink" href="#dmcam-frame-get-gray" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_frame_get_gray(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">float</span> <span class="pre">*dst,</span> <span class="pre">int</span> <span class="pre">dst_len,uint8_t</span> <span class="pre">*src,</span> <span class="pre">int</span> <span class="pre">src_len,</span> <span class="pre">const</span> <span class="pre">dmcam_frame_info_t</span> <span class="pre">*finfo)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>从帧获得的原始数据转换成灰度数据</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>dst[out]:灰度数据 范围是0-65500</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>dst_len[in]：灰度数据长度</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>src[in]:原始数据</td>
+</tr>
+<tr class="row-even"><td>函数参数5</td>
+<td>src_len[in]:原始数据长度，字节</td>
+</tr>
+<tr class="row-odd"><td>函数参数6</td>
+<td>finfo[in]:原始帧信息</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>返回灰度数据个数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-frame-get-pcl">
+<h3>dmcam_frame_get_pcl<a class="headerlink" href="#dmcam-frame-get-pcl" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_frame_get_pcl(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">float</span> <span class="pre">*pcl,</span> <span class="pre">int</span> <span class="pre">pcl_len,const</span> <span class="pre">float</span> <span class="pre">*dist,</span> <span class="pre">int</span> <span class="pre">dist_len,</span> <span class="pre">int</span> <span class="pre">img_w,</span> <span class="pre">int</span> <span class="pre">img_h,</span> <span class="pre">const</span> <span class="pre">dmcam_camera_para_t</span> <span class="pre">*p_cam_param)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>从获得的深度数据转换成点云数据</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>pcl[out]:点云数据缓存, pcl[3i+0],pcl[3i+1],pcl[3i+2]分别作为第i个点在空间X轴Y轴Z轴的坐标</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>pcl_len[in]：点云数据长度</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>dist[in]:深度数据缓存，单位是 m(float)</td>
+</tr>
+<tr class="row-even"><td>函数参数5</td>
+<td>dist_len[in]:深度数据长度</td>
+</tr>
+<tr class="row-odd"><td>函数参数6</td>
+<td>img_w[in]:深度数据图的宽</td>
+</tr>
+<tr class="row-even"><td>函数参数7</td>
+<td>img_h[in]:深度数据图的高</td>
+</tr>
+<tr class="row-odd"><td>函数参数8</td>
+<td>p_cam_param[in]:相机参数，如果为空,则使用内部参数</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>返回点云数据数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-frame-get-pcl-xyzd">
+<h3>dmcam_frame_get_pcl_xyzd<a class="headerlink" href="#dmcam-frame-get-pcl-xyzd" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_frame_get_pcl_xyzd(dmcam_dev_t</span> <span class="pre">*dev,</span> <span class="pre">float</span> <span class="pre">*pcl,</span> <span class="pre">int</span> <span class="pre">pcl_len,const</span> <span class="pre">float</span> <span class="pre">*dist,</span> <span class="pre">int</span> <span class="pre">dist_len,</span> <span class="pre">int</span> <span class="pre">img_w,</span> <span class="pre">int</span> <span class="pre">img_h,bool</span> <span class="pre">pseudo_color,</span> <span class="pre">const</span> <span class="pre">dmcam_camera_para_t</span> <span class="pre">*p_cam_param)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>从获得的深度数据转换成点云数据</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>pcl[out]:点云数据缓存，pcl[4i+0],pcl[4i+1],pcl[4i+2]分别作为第i个点在空间X轴Y轴Z轴的坐标,pcl[4i+3]是深度或者伪彩色</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>pcl_len[in]：点云数据长度</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>dist[in]:深度数据缓存，单位是 m(float)</td>
+</tr>
+<tr class="row-even"><td>函数参数5</td>
+<td>dist_len[in]:深度数据长度</td>
+</tr>
+<tr class="row-odd"><td>函数参数6</td>
+<td>img_w[in]:深度数据图的宽</td>
+</tr>
+<tr class="row-even"><td>函数参数7</td>
+<td>img_h[in]:深度数据图的高</td>
+</tr>
+<tr class="row-odd"><td>函数参数8</td>
+<td>pseudo_color[in]:true则为伪rgb彩色数据，false则为深度数据，单位m</td>
+</tr>
+<tr class="row-even"><td>函数参数9</td>
+<td>p_cam_param[in]:相机参数，如果为空,则使用内部参数</td>
+</tr>
+<tr class="row-odd"><td>函数返回值</td>
+<td>返回点云数据数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="dmcam-filter-enable">
+<h3>dmcam_filter_enable<a class="headerlink" href="#dmcam-filter-enable" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">头文件</th>
+<th class="head">#include “dmcam.h”</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>函数原型</td>
+<td><code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">dmcam_filter_enable(dmcam_dev_t*dev,</span> <span class="pre">dmcam_filter_id_e</span> <span class="pre">fid,</span> <span class="pre">dmcam_filter_args_u</span> <span class="pre">*args,</span> <span class="pre">uint32_t</span> <span class="pre">arg_len)</span></code></td>
+</tr>
+<tr class="row-odd"><td>功能描述</td>
+<td>使能对原始数据进行滤波控制</td>
+</tr>
+<tr class="row-even"><td>函数参数1</td>
+<td>dev[in]:dmcam设备</td>
+</tr>
+<tr class="row-odd"><td>函数参数2</td>
+<td>fid:滤波类型，参考模组滤波类型说明</td>
+</tr>
+<tr class="row-even"><td>函数参数3</td>
+<td>args[in]：滤波控制参数</td>
+</tr>
+<tr class="row-odd"><td>函数参数4</td>
+<td>args_len:参数长度</td>
+</tr>
+<tr class="row-even"><td>函数返回值</td>
+<td>返回负值错误</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

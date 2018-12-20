@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>一般算法评估说明 &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>一般算法评估说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/algorithm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>一般算法评估说明<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>为了方便快捷使用smarttof模组进行二次开发，smarttof SDK 提供了一套完整的开发使用流程说明，通过将流程分为四个阶段，
+每一阶段的成果作为下一阶段的准备，最后整合到用户自己相关的平台中。</p>
+<div class="section" id="id2">
+<h2>录像文件获取<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>在进行二次开发时，为了要验证相关算法，首先是要获得准确的图像数据。针对前期没有模组或者不确定采集的图像数据是否正确的情况下，
+可以先期通过smarttofviewer的录像功能获取，也可以通过dmcam-cli工具的rx命令采集，如何使用Smarttofviewer的录像功能录制录像文件
+和使用dmcam-cli工具的rx命令采集保存录像文件参考SmartToF SDK 用户手册中Smarttofviewer和SmarttofCli的使用说明。</p>
+</div>
+<div class="section" id="id3">
+<h2>离线算法评估<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>即使暂时没有SmartToF系列模组，用户也可以预先在录像文件上进行算法的验证。通过读取原始录像文件数据，加载运行要评估的算法进行运行，
+再查看加入算法后的实际效果。如要对原始深度数据进行滤波，可以加入常用的中值或者双边滤波，也可以是改进后的深度滤波，通过滤波前后的图像效果评估算法效果。
+这种离线算法评估解决了部分用户在没有模组或者未能正常采集模组数据的情况下，提前进入到算法的相关评估工作。</p>
+</div>
+<div class="section" id="id4">
+<h2>在线算法评估<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>通过前期在离线录像文件上的算法评估后，基本确定算法的功能和效果，评估算法是否能够达到设计要求。实际离线文件评估后，
+下一步就是动态的实际评估算法的效果。通过在应用中采集SmartToF模组的实时数据，同时加入前面离线评估的算法处理，
+实时观察和评测算法在pc上的实际效果，最终确定在SmartToF上使用的算法是否的确满足使用要求。</p>
+</div>
+<div class="section" id="id5">
+<h2>实际平台应用<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>前期的离线算法评估和在线算法评估基本上都是基于PC平台，在实际应用中，SmartToF模组可能运行在各种不同的嵌入式平台。
+这时需要在对应得平台上运行相应的SmartToF的库，并且将前面的评估算法移植到对应得平台，最后在实际的嵌入式平台上进行应用开发。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

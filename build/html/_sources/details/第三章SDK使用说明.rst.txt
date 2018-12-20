@@ -1,0 +1,20 @@
+SDK使用说明
+================
+
+SDK目录结构
+----------------
+
+SmartToF SDK目录包括Android,doc,firmware,linux,ros,windows等目录，如
+下图2-3 所示：
+
+.. image:: ../../images/SDK目录.jpg
+
+Windows目录结构如下图所示：
+
+.. image:: ../../images/Windows目录.jpg
+
+Linux目录结构如下图所示：
+
+.. image:: ../../images/Linux目录.jpg
+
+

@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>二次开发流程 &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>二次开发流程</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/secondevelope.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>二次开发流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>基本采集数据<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>一般的数据采集采集流程包括设备初始化，日志配置，创建设备列表，打开
+设备，采集原始数据，获取深度和灰度数据，获取点云数据关闭设备等操作。</p>
+<div class="section" id="id3">
+<h3>接口调用采集说明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>SmartToF SDK在采集时的API接口调用流程如下图所示：</p>
+<img alt="../../_images/采集接口流程.jpg" src="../../_images/采集接口流程.jpg" />
+</div>
+</div>
+<div class="section" id="id4">
+<h2>参数设置和读取示例<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>模组的参数设置和读取分别通过调用dmcam_param_batch_set和dmcam_param_batch_get实现，可以设置积分时间、帧率等参数，也可读取模组信息、温度等参数，具体参数说明参考下面的的主要参数说明。</p>
+<div class="section" id="id5">
+<h3>主要参数说明<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>模组的参数类型在dmcam_dev_param_e的枚举类型中，如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">enum</span> <span class="p">{</span>
+        <span class="n">PARAM_DEV_MODE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">PARAM_MOD_FREQ</span><span class="p">,</span>
+
+        <span class="n">PARAM_INFO_VENDOR</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_PRODUCT</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_CAPABILITY</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_SERIAL</span><span class="p">,</span>
+        <span class="n">PARAM_INFO_VERSION</span><span class="p">,</span>   <span class="o">//</span><span class="n">HW</span><span class="o">&amp;</span><span class="n">SW</span> <span class="n">info</span>
+        <span class="n">PARAM_INFO_SENSOR</span><span class="p">,</span>    <span class="o">//</span><span class="n">part</span> <span class="n">version</span><span class="p">,</span> <span class="n">chip</span> <span class="nb">id</span><span class="p">,</span> <span class="n">wafer</span> <span class="nb">id</span>
+
+        <span class="n">PARAM_INFO_CALIB</span><span class="p">,</span>     <span class="o">//</span><span class="n">get</span> <span class="n">calibration</span> <span class="n">info</span>
+        <span class="n">PARAM_ROI</span><span class="p">,</span>            <span class="o">//</span><span class="n">ROI</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_FRAME_FORMAT</span><span class="p">,</span>   <span class="o">//</span><span class="n">frame</span> <span class="n">information</span><span class="p">,</span><span class="n">eg</span><span class="o">.</span><span class="n">dcs1for</span> <span class="n">gray</span><span class="p">,</span><span class="mi">4</span> <span class="n">dcs</span> <span class="k">for</span> <span class="n">distance</span>
+        <span class="n">PARAM_ILLUM_POWER</span><span class="p">,</span>    <span class="o">//</span><span class="n">illumination</span> <span class="n">power</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_FRAME_RATE</span><span class="p">,</span>     <span class="o">//</span><span class="n">frame</span> <span class="n">rate</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_INTG_TIME</span><span class="p">,</span>      <span class="o">//</span><span class="n">integration</span> <span class="n">time</span> <span class="nb">set</span><span class="o">/</span><span class="n">get</span>
+        <span class="n">PARAM_PHASE_CORR</span><span class="p">,</span>     <span class="o">//</span><span class="n">phase</span> <span class="n">offset</span> <span class="n">correction</span>
+                                                  <span class="o">//</span><span class="n">PARAM_SWITCH_MODE</span><span class="p">,</span> <span class="o">/*&gt;</span><span class="n">swith</span> <span class="n">mode</span> <span class="n">use</span><span class="p">[</span><span class="n">gray</span><span class="p">,</span><span class="mi">3</span><span class="n">d</span><span class="p">]</span><span class="o">*/</span>
+        <span class="n">PARAM_TEMP</span><span class="p">,</span>           <span class="o">//&lt;</span><span class="n">Get</span> <span class="n">camera</span> <span class="n">temperature</span><span class="o">--------------</span>
+        <span class="n">PARAM_HDR_INTG_TIME</span><span class="p">,</span>  <span class="o">//&lt;</span><span class="n">Setting</span> <span class="n">HDR</span> <span class="n">integration</span> <span class="n">time</span> <span class="n">param</span>
+        <span class="n">PARAM_SYNC_DELAY</span><span class="p">,</span>     <span class="o">//&lt;</span><span class="n">delay</span> <span class="n">ms</span> <span class="k">for</span> <span class="n">sync</span> <span class="n">use</span>
+        <span class="n">PARAM_ENUM_COUNT</span><span class="p">,</span>
+<span class="p">}</span><span class="n">dmcam_dev_param_e</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>参数代码示例<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">进行参数设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_param_item_t</span> <span class="n">wparam</span><span class="p">;</span>
+<span class="n">uint16_t</span> <span class="n">intg_time</span> <span class="o">=</span> <span class="mi">700</span><span class="p">;</span>                       <span class="o">//</span><span class="n">表示设置积分的大小</span> <span class="n">范围为0</span><span class="o">-</span><span class="mi">1500</span>
+<span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">wparam</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">wparam</span><span class="p">));</span>
+<span class="n">wparam</span><span class="o">.</span><span class="n">param_id</span> <span class="o">=</span> <span class="n">PARAM_INTG_TIME</span><span class="p">;</span>      <span class="o">//</span><span class="n">表示设置的参数为积分时间</span>
+<span class="n">wparam</span><span class="o">.</span><span class="n">param_val_len</span> <span class="o">=</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">intg_time</span><span class="p">);</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">dmcam_param_batch_set</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="o">&amp;</span><span class="n">wparam</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>   <span class="o">//</span><span class="n">调用API进行单个参数设置</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进行参数读取:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_param_item_t</span> <span class="n">rparam</span><span class="p">;</span>
+<span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">rparam</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">rparam</span><span class="p">));</span>
+<span class="n">rparam</span><span class="o">.</span><span class="n">param_id</span> <span class="o">=</span> <span class="n">PARAM_INTG_TIME</span><span class="p">;</span>      <span class="o">//</span><span class="n">表示要读取的参数项为积分时间</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">dmcam_param_batch_get</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="o">&amp;</span><span class="n">rparam</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>   <span class="o">//</span><span class="n">调用API获取单个参数</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>滤波功能使用<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>SDK中支持对模组进行像素校准使能、最小幅值滤波、自动曝光等fliter功能的使用，filter类型参考dmcam_filter_id_e的说明。</p>
+<div class="section" id="id8">
+<h3>主要滤波功能说明<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>模组的滤波类型在如下的枚举类型中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">enum</span> <span class="p">{</span>
+        <span class="n">DMCAM_FILTER_ID_LEN_CALIB</span><span class="p">,</span>    <span class="o">/**&gt;</span><span class="n">lens</span> <span class="n">calibration</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_PIXEL_CALIB</span><span class="p">,</span>  <span class="o">/**&gt;</span><span class="n">pixel</span> <span class="n">calibration</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_MEDIAN</span><span class="p">,</span>       <span class="o">/**&gt;</span><span class="n">Median</span> <span class="nb">filter</span> <span class="k">for</span> <span class="n">distance</span> <span class="n">data</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_RESERVED</span><span class="p">,</span>        <span class="o">/**&gt;</span><span class="n">Gauss</span> <span class="nb">filter</span> <span class="k">for</span> <span class="n">distance</span> <span class="n">data</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_AMP</span><span class="p">,</span>          <span class="o">/**&gt;</span><span class="n">Amplitude</span> <span class="nb">filter</span> <span class="n">control</span><span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_AUTO_INTG</span><span class="p">,</span>    <span class="o">/**&gt;</span><span class="n">auto</span> <span class="n">integration</span> <span class="nb">filter</span> <span class="n">enable</span> <span class="p">:</span> <span class="n">use</span> <span class="n">sat_ratio</span> <span class="n">to</span> <span class="n">adjust</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_SYNC_DELAY</span><span class="p">,</span>   <span class="o">/**&gt;</span> <span class="n">sync</span> <span class="n">delay</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_TEMP_MONITOR</span><span class="p">,</span> <span class="o">/**&gt;</span><span class="n">temperature</span> <span class="n">monitor</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_HDR</span><span class="p">,</span>          <span class="o">/**&gt;</span><span class="n">HDR</span> <span class="n">mode</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_OFFSET</span><span class="p">,</span>       <span class="o">/**&gt;</span> <span class="nb">set</span> <span class="n">offset</span> <span class="k">for</span> <span class="n">calc</span> <span class="n">distance</span> <span class="o">*/</span>
+        <span class="n">DMCAM_FILTER_ID_SPORT_MODE</span><span class="p">,</span>   <span class="o">/**&gt;</span> <span class="nb">set</span> <span class="n">sport</span> <span class="n">mode</span> <span class="o">*/</span>
+        <span class="o">//-------------------</span>
+        <span class="n">DMCAM_FILTER_CNT</span><span class="p">,</span>
+<span class="p">}</span><span class="n">dmcam_filter_id_e</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>滤波代码示例<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">像素校准，开启后用于深度数据的矫正:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_PIXEL_CALIB</span><span class="p">;</span> <span class="o">//</span><span class="n">像素校准</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启像素校准</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_PIXEL_CALIB</span><span class="p">);</span> <span class="o">//</span><span class="n">关闭像素校准</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">深度滤波，开启后用于对深度数据滤波:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_MEDIAN</span><span class="p">;</span>   <span class="o">//</span><span class="n">深度滤波</span>
+<span class="n">witem</span><span class="o">.</span><span class="n">median_ksize</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="o">//</span><span class="n">深度滤波通常设置值</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启深度滤波</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_MEDIAN</span><span class="p">);</span>       <span class="o">//</span><span class="n">关闭深度滤波</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">幅值滤波，开启后过滤质量差的点:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_AMP</span><span class="p">;</span>      <span class="o">//</span><span class="n">最小幅值滤波</span>
+<span class="n">witem</span><span class="o">.</span><span class="n">min_amp</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>     <span class="o">//</span><span class="n">设置的最小幅值滤波的阈值</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启最小幅值滤波</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_AMP</span><span class="p">);</span>  <span class="o">//</span><span class="n">关闭最小幅值滤波</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">自动积分时间，开启后根据被测物体的距离自动调整曝光时间大小:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_AUTO_INTG</span><span class="p">;</span>        <span class="o">//</span><span class="n">自动曝光</span>
+<span class="n">witem</span><span class="o">.</span><span class="n">sat_ratio</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span><span class="o">//</span><span class="n">自动曝光时设置的值</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启自动曝光</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_AUTO_INTG</span><span class="p">);</span>    <span class="o">//</span><span class="n">关闭自动曝光</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">多模组串扰消除，开启消除或者减小多模组同时开启时的串扰:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_SYNC_DELAY</span><span class="p">;</span>        <span class="o">//</span><span class="n">串扰延时</span>
+<span class="n">witem</span><span class="o">.</span><span class="n">sync_delay</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="o">//</span><span class="n">延时时间设为0时为随机时间</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启串扰延时</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_SYNC_DELAY</span><span class="p">);</span>   <span class="o">//</span><span class="n">关闭串扰延时</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运动模式0，帧格式要设置为2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmcam_filter_args_u</span> <span class="n">witem</span><span class="p">;</span>
+<span class="n">dmcam_filter_id_e</span> <span class="n">filter_id</span> <span class="o">=</span> <span class="n">DMCAM_FILTER_ID_SPORT_MODE</span><span class="p">;</span>        <span class="o">//</span><span class="n">运动模式0</span>
+<span class="n">dmcam_param_item_t</span> <span class="n">wparam</span><span class="p">;</span>
+<span class="n">uint32_t</span> <span class="n">set_format</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>        <span class="o">//</span><span class="n">表示要设置的帧格式为2</span>
+<span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">wparam</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">wparam</span><span class="p">));</span>
+<span class="n">wparam</span><span class="o">.</span><span class="n">param_id</span> <span class="o">=</span> <span class="n">PARAM_FRAME_FORMAT</span><span class="p">;</span>   <span class="o">//</span><span class="n">表示设置的参数为帧格式</span>
+<span class="n">wparam</span><span class="o">.</span><span class="n">frame_format</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="n">set_format</span><span class="p">;</span>        <span class="o">//</span><span class="n">设置的帧格式为2</span>
+<span class="n">wparam</span><span class="o">.</span><span class="n">param_val_len</span> <span class="o">=</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">set_format</span><span class="p">);</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">dmcam_param_batch_set</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="o">&amp;</span><span class="n">wparam</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>   <span class="o">//</span><span class="n">调用API进行帧格式参数设置</span>
+<span class="n">witem</span><span class="o">.</span><span class="n">sport_mode</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="o">//</span><span class="n">设置运动模式为0</span>
+<span class="n">dmcam_filter_enable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">filter_id</span><span class="p">,</span><span class="o">&amp;</span><span class="n">witem</span><span class="p">,</span><span class="n">sizeof</span><span class="p">(</span><span class="n">dmcam_filter_args_u</span><span class="p">));</span><span class="o">//</span><span class="n">开启运动模式0</span>
+<span class="n">dmcam_filter_disable</span><span class="p">(</span><span class="n">dev</span><span class="p">,</span><span class="n">DMCAM_FILTER_ID_SPORT_MODE</span><span class="p">);</span><span class="o">//</span><span class="n">关闭运动模式0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运动模式1，帧格式要设置为4:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>dmcam_filter_args_u witem;
+dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_SPORT_MODE;        //运动模式1
+dmcam_param_item_t wparam;
+uint32_t set_format = 4;        //表示要设置的帧格式为4
+memset(&amp;wparam,0,sizeof(wparam));
+wparam.param_id = PARAM_FRAME_FORMAT;   //表示设置的参数为帧格式
+wparam.frame_format.format = set_format;        //设置的帧格式为4
+wparam.param_val_len = sizeof(set_format);
+assert(dmcam_param_batch_set(dev,&amp;wparam,1));   //调用API进行帧格式参数设置
+witem.sport_mode = 1;   //设置运动模式为1
+dmcam_filter_enable(dev,filter_id,&amp;witem,sizeof(dmcam_filter_args_u));//开启运动模式1
+//关闭运动模式1时，帧格式要先恢复到2
+set_format = 2;         //帧格式要恢复设置为2
+wparam.frame_format.format = set_format;        //设置的帧格式的值为2
+wparam.param_id = PARAM_FRAME_FORMAT;   //表示设置的参数为帧格式
+wparam.param_val_len = sizeof(set_format);
+assert(dmcam_param_batch_set(dev,&amp;wparam,1));   //调用API进行帧格式参数设置2
+dmcam_filter_disable(dev,DMCAM_FILTER_ID_SPORT_MODE);//关闭运动模式1
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

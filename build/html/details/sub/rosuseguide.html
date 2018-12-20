@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Smarttof SDK ROS Userguide &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Smarttof SDK ROS Userguide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/rosuseguide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="smarttof-sdk-ros-userguide">
+<h1>Smarttof SDK ROS Userguide<a class="headerlink" href="#smarttof-sdk-ros-userguide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dmcam-ros">
+<h2>DMCAM ROS 概述<a class="headerlink" href="#dmcam-ros" title="Permalink to this headline">¶</a></h2>
+<p>DMCAM ROS是基于ROS系统对DMCAM API的封装，具有如下所列功能：</p>
+<ul class="simple">
+<li>深度数据和灰度数据采集与显示</li>
+<li>动态修改参数</li>
+<li>点云数据采集与显示</li>
+</ul>
+<p>DMCAM ROS基于ROS系统，创建dmcam_ros和cloud_viewer两个包，dmcam_ros包用来采集与显示深度、灰度数据和动态修改参数，cloud_viewer包是一个示例，用来显示点云数据，组织架构图如下图所示：</p>
+<img alt="../../_images/1ros架构.jpg" src="../../_images/1ros架构.jpg" />
+</div>
+<div class="section" id="id1">
+<h2>DMCAM ROS主要使用流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>DMCAM ROS 使用前准备<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>DMCAM ROS在使用前需要先安装Ubuntu系统和ROS系统，详细安装参阅ros安装说明</p>
+</div>
+<div class="section" id="id3">
+<h3>测试深度数据和灰度数据<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dmcam_ros</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">显示深度图命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">image_view</span> <span class="n">image_view</span> <span class="n">image</span><span class="p">:</span><span class="o">=/</span><span class="n">smarttof</span><span class="o">/</span><span class="n">image_dist</span>
+</pre></div>
+</div>
+<p>深度图像显示如下：</p>
+<img alt="../../_images/2ros深度.jpg" src="../../_images/2ros深度.jpg" />
+</li>
+<li><p class="first">显示灰度图命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">image_view</span> <span class="n">image_view</span> <span class="n">image</span><span class="p">:</span><span class="o">=/</span><span class="n">smarttof</span><span class="o">/</span><span class="n">image_gray</span>
+</pre></div>
+</div>
+<img alt="../../_images/3ros灰度.jpg" src="../../_images/3ros灰度.jpg" />
+</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>动态修改参数<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>开启一个滤波功能，如DMCAM_FILTER_ID_AUTO_INTG:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">smarttof</span><span class="o">/</span><span class="n">change_filter</span> <span class="s2">&quot;filter_id:</span>
+<span class="s1">&#39;DMCAM_FILTER_ID_AUTO_INTG&#39;</span>
+<span class="n">filter_value</span><span class="p">:</span> <span class="mi">0</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>关闭一个滤波功能，如DMCAM_FILTER_ID_AUTO_INTG:</p>
+<blockquote>
+<div>rosservice call /smarttof/disable_filter “filter_id:
+‘DMCAM_FILTER_ID_AUTO_INTG’”</div></blockquote>
+</div>
+</div>
+<div class="section" id="cloud-viewer">
+<h2>cloud viewer样例说明<a class="headerlink" href="#cloud-viewer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>cloud viewer 简介<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>cloud_viewer是一个简单的使用dmcam_ros来显示点云数据的样例，这个样例简单的实现了怎么从dmcam_ros发布的话题pointcloud中获取点云数据并显示出来。</p>
+</div>
+<div class="section" id="id6">
+<h3>显示点云数据<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">cloud_viewer</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">显示点云图像</p>
+<blockquote>
+<div><img alt="../../_images/ros点云1.jpg" src="../../_images/ros点云1.jpg" />
+</div></blockquote>
+</li>
+<li><p class="first">通过鼠标中间的滑轮和鼠标左键调整点云显示图像，最终效果如图</p>
+<blockquote>
+<div><img alt="../../_images/ros点云2.jpg" src="../../_images/ros点云2.jpg" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API接口说说明<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>dmcam ros发布的话题<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="smarttof-image-dist">
+<h4>/smarttof/image_dist<a class="headerlink" href="#smarttof-image-dist" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosrun image_view image_view image:=/smarttof/image_dist</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>从image_dist发布的话题中获取深度数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-image-gray">
+<h4>/smarttof/image_gray<a class="headerlink" href="#smarttof-image-gray" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosrun image_view image_view image:=/smarttof/image_gray</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>从image_gray发布的话题中获取灰度数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-camera-info">
+<h4>/smarttof/camera_info<a class="headerlink" href="#smarttof-camera-info" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rostopic echo /smarttof/camera_info</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>从camera_info发布的话题中打印摄像头的信息</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-pointcloud">
+<h4>/smarttof/pointcloud<a class="headerlink" href="#smarttof-pointcloud" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rviz</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>从rviz中显示通过pointcloud发布的话题中的点云数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>dmcam ros发布的服务<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="smarttof-change-power">
+<h4>/smarttof/change_power<a class="headerlink" href="#smarttof-change-power" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/change_power “power_value: 0”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>动态修改PARAM_ILLUM_POWER的值，</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td>保留</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-change-intg">
+<h4>/smarttof/change_intg<a class="headerlink" href="#smarttof-change-intg" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/change_intg “intg_value: 0”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>动态修改PARAM_INTG_TIME的值，PARAM_INTG_TIME为积分时间</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td>“intg_value: 0”中积分时间的范围为0-1500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-change-mode-freq">
+<h4>/smarttof/change_mode_freq<a class="headerlink" href="#smarttof-change-mode-freq" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/ change_mod_freq “mod_freq_value: 0”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>动态修改PARAM_MOD_FREQ的值，PARAM_MOD_FREQ为时钟频率</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td>“mod_freq_value:0”中目前固定为12MHz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-change-frame-rate">
+<h4>/smarttof/change_frame_rate<a class="headerlink" href="#smarttof-change-frame-rate" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/ change_frame_rate “frame_rate_value: 0”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>动态修改PARAM_FRAME_RATE的值，PARAM_FRAME_RATE为帧率</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td>“frame_rate_value:0”中的范围为10-30</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-change-sync-delay">
+<h4>/smarttof/change_sync_delay<a class="headerlink" href="#smarttof-change-sync-delay" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/ change_sync_delay “sync_delay_value: 0”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>动态修改PARAM_SYNC_DELAY的值，PARAM_SYNC_DELAY为同步延时时间</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td>“sync_delay_value:0”，0为自动，1-10为指定范围</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-change-filter">
+<h4>/smarttof/change_filter<a class="headerlink" href="#smarttof-change-filter" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td><dl class="first last docutils">
+<dt>rosservice call /smarttof/change_filter  “filter_id: ‘’</dt>
+<dd>filter_value: 0”</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>打开filter_id中指定id值的滤波功能</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td><dl class="first last docutils">
+<dt>“filter_id: ‘’中的id值可以设置为</dt>
+<dd>DMCAM_FILTER_ID_LEN_CALIB,  //镜头校准
+DMCAM_FILTER_ID_PIXEL_CALIB //像素校准
+DMCAM_FILTER_ID_KALMAN  //卡尔曼滤波器
+DMCAM_FILTER_ID_GAUSS  //高斯滤波器
+DMCAM_FILTER_ID_AMP //幅值滤波器
+DMCAM_FILTER_ID_AUTO_INTG  //积分滤波器
+DMCAM_FILTER_ID_SYNC_DELAY //消除多模组使用干扰
+“filter_value:0”中的value值默认为0
+目前仅DMCAM_FILTER_ID_AMP需要设置filter_value值，范围为0-100，
+其它的filter_id该值默认为0即可。</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="smarttof-disable-filter">
+<h4>/smarttof/disable_filter<a class="headerlink" href="#smarttof-disable-filter" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="colwidths-given docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>使用命令</td>
+<td>rosservice call /smarttof/disable_filter “filter_id: ‘’”</td>
+</tr>
+<tr class="row-even"><td>功能描述</td>
+<td>打开filter_id中指定id值的滤波功能</td>
+</tr>
+<tr class="row-odd"><td>函数参数</td>
+<td><dl class="first last docutils">
+<dt>“filter_id: ‘’中的id值可以设置为</dt>
+<dd>DMCAM_FILTER_ID_LEN_CALIB,  //镜头校准
+DMCAM_FILTER_ID_PIXEL_CALIB //像素校准
+DMCAM_FILTER_ID_KALMAN  //卡尔曼滤波器
+DMCAM_FILTER_ID_GAUSS  //高斯滤波器
+DMCAM_FILTER_ID_AMP //幅值滤波器
+DMCAM_FILTER_ID_AUTO_INTG  //积分滤波器
+DMCAM_FILTER_ID_SYNC_DELAY //消除多模组使用干扰
+“filter_value:0”中的value值默认为0
+目前仅DMCAM_FILTER_ID_AMP需要设置filter_value值，范围为0-100，
+其它的filter_id该值默认为0即可。</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="sdk-ros">
+<h2>SDK ROS系统安装及环境配置<a class="headerlink" href="#sdk-ros" title="Permalink to this headline">¶</a></h2>
+<p>本文档主要介绍ROS系统安装、环境配置、测试以及基于ROS系统中模组的使用方法。</p>
+<div class="section" id="ros">
+<h3>ROS系统安装准备工作<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>ROS支持的平台<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>如下图所示，推荐使用Ubuntu14.04（Trusty ）或者Ubuntu16.04（Xenial）。</p>
+<blockquote>
+<div><img alt="../../_images/ros支持平台.jpg" src="../../_images/ros支持平台.jpg" />
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h4>安装前准备工作<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>安装过程中大概会下载500MB左右的软件包，为了避免下载软件包速度过慢，推荐使用网易源或者其他国内源进行下载安装（替换为网易源请参考http://mirrors.163.com/.help/ubuntu.html）。</p>
+<p>以下安装方法以安装ROS Kinetic版本 为例，其他版本安装方法类似。</p>
+</div>
+</div>
+<div class="section" id="ubuntu">
+<h3>Ubuntu系统下快速安装（推荐使用）<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">打开命令行终端，进入ros所在文件夹，运行命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">755</span> <span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">出现如下图4所示选择安装版本，手动输入版本名称后按回车开始安装，Ubuntu14.04推荐使用indigo，Ubuntu16.04推荐使用kinetic。</p>
+<blockquote>
+<div><img alt="../../_images/ros_kinetic.jpg" src="../../_images/ros_kinetic.jpg" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h3>Ubuntu系统下命令行安装<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">添加 sources.list，设置你的电脑可以从 packages.ros.org 接收软件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">添加 keys</p>
+<blockquote>
+<div><p>sudo apt-key adv –keyserver hkp://ha.pool.sks-keyservers.net:80 –recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-get update</p>
+</div></blockquote>
+</li>
+<li><p class="first">在ROS中，有很多不同的库和工具。我们提供了四种默认的配置来帮助你开始。你也可以单独安装ROS包。</p>
+<blockquote>
+<div><ul>
+<li><p class="first">桌面完整版: (推荐) : 包含ROS、rqt、rviz、机器人通用库、2D/3D 模拟器、导航以及2D/3D感知:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">desktop</span><span class="o">-</span><span class="n">full</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">桌面版安装: 包含ROS、rqt、rviz以及通用机器人函数库:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">desktop</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">基础版安装: (简版) 包含ROS核心软件包、构建工具以及通信相关的程序库，无GUI工具:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">ros</span><span class="o">-</span><span class="n">base</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">单个软件包安装: 你也可以安装某个指定的ROS软件包（使用软件包名称替换掉下面的PACKAGE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">PACKAGE</span>
+
+<span class="n">例如</span><span class="p">::</span>
+
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">kinetic</span><span class="o">-</span><span class="n">slam</span><span class="o">-</span><span class="n">gmapping</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">初始化 rosdep</p>
+<blockquote>
+<div><p>在开始使用ROS之前你还需要初始化rosdep。rosdep可以方便在你需要编译某些源码的时候为其安装一些系统依赖，同时也是某些ROS核心功能组件所必需用到的工具:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rosdep</span> <span class="n">init</span>
+<span class="n">rosdep</span> <span class="n">update</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="rosdmcam-ros">
+<h3>ROS环境配置及DMCAM ROS编译<a class="headerlink" href="#rosdmcam-ros" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h4>ROS环境配置<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>每次使用ROS系统前需要初始化安装版本的环境变量，以Kinetic为例，Kinetic默认安装在/opt/ros/kinetic/目录下，该环境变量配置文件位置/opt/ros/kinetic/setup.bash,每次使用前需要初始化ros环境，命令如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>为了简化配置环境变量的过程，可以选择把环境变量的配置放在~/.bashrc文件中，这样每次打开一个新终端的时候，ROS的环境变量会自动配置好:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source /opt/ros/kinetic/setup.bash&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h4>5DMCAM ROS系统编译<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">进入ros所在目录，通过ls命令查看目录中文件如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>  <span class="n">Makefile</span>  <span class="n">src</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">使用catkin_make(Makefile中实现了catkin_make使用的步骤，也可以使用make命令来编译):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span><span class="p">(</span><span class="n">未在bashrc中设置初始化环境需要这一步</span><span class="p">)</span>
+<span class="n">catkin_make</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">编译完成后会生成devel和build目录，通过ls命令查看编译生成的文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">build</span>  <span class="n">devel</span>  <span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>  <span class="n">Makefile</span>  <span class="n">src</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">初始化devel中的环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="rviz">
+<h2>RVIZ 显示图像、点云数据<a class="headerlink" href="#rviz" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>rviz简介<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>rviz是ros自带的一个图形化工具，可以方便的对ros的程序进行图形化操作。其使用也是比较简单。 整体界面如下图所示 ：</p>
+<blockquote>
+<div><img alt="../../_images/rviz界面.jpg" src="../../_images/rviz界面.jpg" />
+</div></blockquote>
+<p>界面主要分为左侧的显示设置区域，中间的大的显示区域和右侧的视角设置区域。最上面是和导航相关的几个工具。最下面是ros状态相关的一些数据的显示。</p>
+</div>
+<div class="section" id="id15">
+<h3>rviz使用前准备<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dmcam_ros</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id16">
+<h3>rviz显示深度图像<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">打开一个终端，运行rviz:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rviz</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">选中add，By topic中选中image_dist下的Image，最后确认添加，如下图所示：</p>
+<blockquote>
+<div><img alt="../../_images/添加image_view.jpg" src="../../_images/添加image_view.jpg" />
+</div></blockquote>
+</li>
+<li><p class="first">显示效果如下图所示：</p>
+<blockquote>
+<div><img alt="../../_images/深度图像显示效果.jpg" src="../../_images/深度图像显示效果.jpg" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="id17">
+<h3>rviz显示点云图像<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">打开一个终端，运行rviz:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rviz</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">选中add，byTopic中选中pointcloud下的PointCloud2，最后确认添加.</p>
+<blockquote>
+<div><img alt="../../_images/添加点云显示.jpg" src="../../_images/添加点云显示.jpg" />
+</div></blockquote>
+</li>
+<li><p class="first">在rviz左上角的displays区域，修改GlobalOptions下的变量FixedFrame值为dmcam_ros，点云显示如下图</p>
+<blockquote>
+<div><img alt="../../_images/rviz点云显示.jpg" src="../../_images/rviz点云显示.jpg" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

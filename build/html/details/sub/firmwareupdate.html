@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>固件升级概述 &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>固件升级概述</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/firmwareupdate.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>固件升级概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>模组固件是指运行在模组内的主控mcu上，主要控制TOF芯片的采集方式和获取TOF芯片的原始数据。为了配合新版SDK的新功能和修改原有版本的bug，需要对模组固件也进行升级。</p>
+</div>
+<div class="section" id="id2">
+<h1>固件升级说明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id3">
+<h2>升级包<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>每个版本SDK中都包括一个firmware文件，里面包含windows和linux两个文件夹，
+根据升级时对应的系统，进入相应的文件夹。firmware文件夹如下图：</p>
+<img alt="../../_images/firmware目录.jpg" src="../../_images/firmware目录.jpg" />
+</div>
+<div class="section" id="id4">
+<h2>升级方法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>进入对应的系统升级包，如windows下运行fw_upgrade_win.bat脚本，在linux下
+则运行fw_upgrade_linux.sh脚本，如windows下的升级截图如下图：</p>
+<img alt="../../_images/windows升级流程图.jpg" src="../../_images/windows升级流程图.jpg" />
+<p><strong>注意：</strong> 升级前的固件版本如果小于143（包括143），固件升级时需要将原来的校准数据进行处理，所以需要比较长的时间，升级时需耐心等待，确保升级成功前禁止关闭升级窗口。</p>
+</div>
+<div class="section" id="id5">
+<h2>升级验证<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>升级后需要确认是否升级成功，通过打开SDK中SmartToF Viewer,查看像素校准是
+否可以正常勾选，如果不能正常勾选，则有可能是原来的固件版本低于143，升级时校准数据升级出错。正常如下图，像素校准可以正常打勾，并且右边的SW:150代表升级后的固件版本。</p>
+<img alt="../../_images/升级viewer.jpg" src="../../_images/升级viewer.jpg" />
+<p>除了SmartToF Viewer,也可运行开tool中的dmcam-cli工具，默认进入CLI的交互模式，输入info命令后回车会显示模组的信息，查看MCU Firmware Version后的版本号是不是需要升级的固件版本号，如下图所示：</p>
+<img alt="../../_images/CLIVer.jpg" src="../../_images/CLIVer.jpg" />
+</div>
+<div class="section" id="id6">
+<h2>其他<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id7">
+<h2>升级文档修订历史<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils" id="id8">
+<caption><span class="caption-text">表1 固件升级文档修订历史</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="23%" />
+<col width="31%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">版本</th>
+<th class="head">日期</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0.1</td>
+<td>3/15/2018</td>
+<td>初版</td>
+</tr>
+<tr class="row-odd"><td>1.0</td>
+<td>11/3/2018</td>
+<td>以固件升级包作为说明</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

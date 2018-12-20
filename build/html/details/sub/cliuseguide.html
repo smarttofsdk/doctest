@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dmcam-cli工具概述 &mdash; Smarttof SDK UserGuide 1.60.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Smarttof SDK UserGuide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.60
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/C_C++/index.html">C/C++示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Csharp/index.html">C#示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Java/index.html">Java示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/Python/index.html">Python样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial/ROS/index.html">ROS样例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Android/index.html">Android扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Reference/tools/index.html">工具详细说明</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Smarttof SDK UserGuide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>dmcam-cli工具概述</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/details/sub/cliuseguide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dmcam-cli">
+<h1>dmcam-cli工具概述<a class="headerlink" href="#dmcam-cli" title="Permalink to this headline">¶</a></h1>
+<p>SDK中的dmcam-cli工具是方便用户在二次开发时进行诊断和测试使用，主要包括以下几个功能：</p>
+<ul class="simple">
+<li>硬件设备信息获取</li>
+<li>硬件参数设置</li>
+<li>数据采集和保存</li>
+<li>固件更新</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h1>dmcam-cli工作方式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>dmcam-cli可以通过命令行与硬件设备进行交互，一般通过下面三种方式使用：</p>
+<ul class="simple">
+<li>命令行参数方式：具体参数定义参见表2-1</li>
+<li>脚本文件方式: 参见表 2 1 中‘-s, –script &lt;file&gt;’选项。</li>
+<li>交互模式：参见表 2 1 中’-i, –interactive’选项。</li>
+</ul>
+<p>下图是命令行参数模式和交互模式的参考使用截图</p>
+<img alt="../../_images/1模式截图.jpg" src="../../_images/1模式截图.jpg" />
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">在windows下，直接双击运行dmcam-cli.exe,默认进入交互模式。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h1>dmcam-cli详细命令<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>下表2-1列出了dmcam所有的命令和参数，并展示了样例的基本使用方法。更详细的说明可输入–help和–help-interactive参数进行查看。</p>
+<table border="1" class="colwidths-auto docutils" id="id7">
+<caption><span class="caption-text">表2-1 命令列表</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Script mode functions</th>
+<th class="head">options</th>
+<th class="head">appended options</th>
+<th class="head">example</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>指定设备</td>
+<td><code class="docutils literal notranslate"><span class="pre">-d,</span> <span class="pre">--device</span> <span class="pre">&lt;device&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--print</span> <span class="pre">info</span> <span class="pre">--device</span> <span class="pre">0</span></code></td>
+</tr>
+<tr class="row-odd"><td>set verbosity</td>
+<td><code class="docutils literal notranslate"><span class="pre">-v,</span> <span class="pre">--verbosity</span> <span class="pre">&lt;level&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--print</span> <span class="pre">info</span> <span class="pre">--device</span> <span class="pre">0</span> <span class="pre">-v</span> <span class="pre">critical</span></code></td>
+</tr>
+<tr class="row-even"><td>枚举设备</td>
+<td><code class="docutils literal notranslate"><span class="pre">-l,</span> <span class="pre">--list</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">-l</span></code></td>
+</tr>
+<tr class="row-odd"><td>复位设备</td>
+<td><code class="docutils literal notranslate"><span class="pre">-r,</span> <span class="pre">--reset</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">-r</span></code></td>
+</tr>
+<tr class="row-even"><td>执行 interactive mode command, 可多次使用</td>
+<td><code class="docutils literal notranslate"><span class="pre">-e,</span> <span class="pre">--exec</span> <span class="pre">&lt;command&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">-e</span> <span class="pre">&quot;print</span> <span class="pre">info&quot;</span> <span class="pre">-e</span> <span class="pre">&quot;print</span> <span class="pre">frame_format&quot;</span></code></td>
+</tr>
+<tr class="row-odd"><td>Run provided script</td>
+<td><code class="docutils literal notranslate"><span class="pre">-s,</span> <span class="pre">--script</span> <span class="pre">&lt;file&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">-s</span> <span class="pre">script.txt</span></code></td>
+</tr>
+<tr class="row-even"><td>进入 interactive mode</td>
+<td><code class="docutils literal notranslate"><span class="pre">-i,</span> <span class="pre">--interactive</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">-i</span></code></td>
+</tr>
+<tr class="row-odd"><td>print cli version</td>
+<td><code class="docutils literal notranslate"><span class="pre">--version</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--version</span></code></td>
+</tr>
+<tr class="row-even"><td>print cli help info</td>
+<td><code class="docutils literal notranslate"><span class="pre">-h,</span> <span class="pre">--help</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--help</span></code></td>
+</tr>
+<tr class="row-odd"><td>show interactive mode help info</td>
+<td><code class="docutils literal notranslate"><span class="pre">--help-interactive</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--help-interactive</span></code></td>
+</tr>
+<tr class="row-even"><td>固件升级</td>
+<td><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--flash-MCU-firmware</span> <span class="pre">&lt;file&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--flash-MCU</span> <span class="pre">fw_mcu.bin</span></code></td>
+</tr>
+<tr class="row-odd"><td>写寄存器</td>
+<td><code class="docutils literal notranslate"><span class="pre">--regwr</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">--target</span> <span class="pre">&lt;target&gt;</span> <span class="pre">--base</span> <span class="pre">&lt;base&gt;</span> <span class="pre">--value</span> <span class="pre">&lt;val&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regwr</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span> <span class="pre">--value</span> <span class="pre">0xaa</span></code> <code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regwr</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span> <span class="pre">--value</span> <span class="pre">&quot;0xaa</span> <span class="pre">0xbb</span> <span class="pre">0xcc&quot;</span></code> <code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regwr</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span> <span class="pre">--value</span> <span class="pre">test.bin</span></code></td>
+</tr>
+<tr class="row-even"><td>读寄存器</td>
+<td><code class="docutils literal notranslate"><span class="pre">--regrd</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">--target</span> <span class="pre">&lt;target&gt;</span> <span class="pre">--base</span> <span class="pre">&lt;base&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regrd</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span></code> <code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regrd</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span> <span class="pre">--cnt</span> <span class="pre">5</span></code> <code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--regrd</span> <span class="pre">--target</span> <span class="pre">tfc_tg</span> <span class="pre">--base</span> <span class="pre">0x100</span> <span class="pre">--cnt</span> <span class="pre">5</span> <span class="pre">--value</span> <span class="pre">test1.bin</span></code></td>
+</tr>
+<tr class="row-odd"><td>写参数</td>
+<td><code class="docutils literal notranslate"><span class="pre">--set</span> <span class="pre">&lt;param&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">[--param</span> <span class="pre">&lt;param&gt;]</span> <span class="pre">--value</span> <span class="pre">&lt;val&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--set</span> <span class="pre">mode</span> <span class="pre">--value</span> <span class="pre">1</span></code></td>
+</tr>
+<tr class="row-even"><td>读参数</td>
+<td><code class="docutils literal notranslate"><span class="pre">--print</span> <span class="pre">&lt;param&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">[--param</span> <span class="pre">&lt;param&gt;]</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">dmcam-cli.exe</span> <span class="pre">--print</span> <span class="pre">mode</span></code></td>
+</tr>
+<tr class="row-odd"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>以下为交互模式</strong></td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>固件升级</td>
+<td><code class="docutils literal notranslate"><span class="pre">flash</span> <span class="pre">&lt;target&gt;</span> <span class="pre">&lt;version&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">flash</span> <span class="pre">mcu</span> <span class="pre">fw_mcu.bin</span></code></td>
+</tr>
+<tr class="row-even"><td>写寄存器</td>
+<td><code class="docutils literal notranslate"><span class="pre">regwr</span> <span class="pre">&lt;target&gt;</span> <span class="pre">&lt;base&gt;</span> <span class="pre">[&lt;&amp;file&gt;</span> <span class="pre">|</span> <span class="pre">&lt;P0&gt;</span> <span class="pre">&lt;P1&gt;…</span> <span class="pre">&lt;P4n&gt;]</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">regwr</span> <span class="pre">mcu</span> <span class="pre">0x11</span> <span class="pre">test.bin</span></code> <code class="docutils literal notranslate"><span class="pre">regwr</span> <span class="pre">tfc_de</span> <span class="pre">0x10</span> <span class="pre">0x11</span> <span class="pre">0x12</span> <span class="pre">13</span></code></td>
+</tr>
+<tr class="row-odd"><td>读寄存器</td>
+<td><code class="docutils literal notranslate"><span class="pre">regrd</span> <span class="pre">&lt;parameter&gt;</span> <span class="pre">&lt;base&gt;</span> <span class="pre">[cnt]</span> <span class="pre">[&amp;file]</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">regrd</span> <span class="pre">mcu</span> <span class="pre">0x01</span> <span class="pre">5</span> <span class="pre">regrd</span> <span class="pre">tfc_de</span> <span class="pre">0x10</span> <span class="pre">test2.bin</span></code></td>
+</tr>
+<tr class="row-even"><td>写参数</td>
+<td><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">&lt;parameter&gt;</span> <span class="pre">&lt;arguments&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">frequency</span> <span class="pre">1</span> <span class="pre">set</span> <span class="pre">frame_format</span> <span class="pre">1</span> <span class="pre">set</span> <span class="pre">frame_rate</span> <span class="pre">30</span> <span class="pre">set</span> <span class="pre">intg_time</span> <span class="pre">30</span></code></td>
+</tr>
+<tr class="row-odd"><td>读参数</td>
+<td><code class="docutils literal notranslate"><span class="pre">print/p</span> <span class="pre">[parameter]</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">print</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">info</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">mode</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">frequency</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">format</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">frame_rate</span></code> <code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">roi</span></code></td>
+</tr>
+<tr class="row-even"><td>采集固定数量的frame到文件</td>
+<td><code class="docutils literal notranslate"><span class="pre">rx</span> <span class="pre">&lt;data</span> <span class="pre">src&gt;</span> <span class="pre">&lt;&amp;file&gt;</span> <span class="pre">&lt;frame</span> <span class="pre">count&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">rx</span> <span class="pre">raw</span> <span class="pre">raw.bin</span> <span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">rx</span> <span class="pre">depth</span> <span class="pre">depth.bin</span> <span class="pre">10</span></code></td>
+</tr>
+<tr class="row-odd"><td>采集固定数量数据到buffer</td>
+<td><code class="docutils literal notranslate"><span class="pre">read</span> <span class="pre">&lt;frame</span> <span class="pre">count&gt;</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">read</span> <span class="pre">5</span></code></td>
+</tr>
+<tr class="row-even"><td>同print info</td>
+<td><code class="docutils literal notranslate"><span class="pre">info</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">info</span></code></td>
+</tr>
+<tr class="row-odd"><td>显示所有version信息</td>
+<td><code class="docutils literal notranslate"><span class="pre">version</span></code></td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">version</span></code></td>
+</tr>
+<tr class="row-even"><td>others</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td><code class="docutils literal notranslate"><span class="pre">cls</span></code> <code class="docutils literal notranslate"><span class="pre">quit</span></code> <code class="docutils literal notranslate"><span class="pre">help</span></code> <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">rx</span></code> <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">who</span> <span class="pre">am</span> <span class="pre">i</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">针对TC系列模组,谨慎涉及寄存器的读写操作，误读写可能产生不可预知的问题。</p>
+</div>
+<div class="section" id="id3">
+<h2>硬件设备信息获取<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>当设备连接后，可以通过dmcam-cli交互模式的print命令进行硬件设备信息获取，命令格式如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="p">[</span><span class="n">parameter</span><span class="p">]</span>
+</pre></div>
+</div>
+<img alt="../../_images/2设备信息.jpg" src="../../_images/2设备信息.jpg" />
+</div>
+<div class="section" id="id4">
+<h2>硬件参数设置<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>当设备连接后，可以通过dmcam-cli交互模式的set命令设置硬件参数，命令格式如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/3交互参考.jpg" src="../../_images/3交互参考.jpg" />
+</div>
+<div class="section" id="id5">
+<h2>数据采集<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>当设备连接后，可以通过dmcam-cli交互模式的rx命令进行数据采集，并将数据存入指定文件，采集的数据格式包括原始数据、深度数据、灰度数据和点云数据，命令格式如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rx</span>  <span class="o">&lt;</span><span class="n">data</span> <span class="n">src</span><span class="o">&gt;</span> <span class="o">&lt;&amp;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">frame</span> <span class="n">count</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/4交互数据采集.jpg" src="../../_images/4交互数据采集.jpg" />
+</div>
+<div class="section" id="id6">
+<h2>固件更新<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>固件更新的详细内容参考 <a class="reference internal" href="../第三章使用.html#update-label"><span class="std std-ref">SDK固件升级</span></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, ni
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
