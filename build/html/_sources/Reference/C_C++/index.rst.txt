@@ -6,5 +6,5 @@ C/C++扩展说明
    :name: tof-Reference
    :numbered:
    
-   windowsc.rst
-   linuxc.rst
+   C扩展介绍.rst
+   C扩展API.rst

@@ -8,39 +8,39 @@ Welcome to smarttof's documentation!
 
 .. toctree::
    :maxdepth: 3
-   :caption: Introduction
+   :caption: 介绍
 
    Introduction/index.rst
    
 .. toctree::
    :maxdepth: 3
-   :caption: Start
+   :caption: 开始
 
    GettingStart/index.rst
    
 .. toctree::
    :maxdepth: 3
-   :caption: Tutorial
+   :caption: 样例指南
 
-   Tutorial/Android/index.rst
    Tutorial/C_C++/index.rst
+   Tutorial/Python/index.rst
    Tutorial/Csharp/index.rst
-   Tutorial/Java/index.rst
-   Tutorial/OpenNI2/index.rst
-   Tutorial/Python/index.rst	
+   Tutorial/Java/index.rst	
    Tutorial/ROS/index.rst
+   Tutorial/OpenNI2/index.rst
+   Tutorial/Android/index.rst
    
 .. toctree::
    :maxdepth: 3
-   :caption: Reference
+   :caption: 详细说明
 
-   Reference/Android/index.rst
    Reference/C_C++/index.rst
+   Reference/Python/index.rst   
    Reference/Csharp/index.rst
-   Reference/Java/index.rst
-   Reference/Python/index.rst	
+   Reference/Java/index.rst	
    Reference/ROS/index.rst
    Reference/tools/index.rst
+   Reference/Android/index.rst
    
 Indices and tables
 ==================
