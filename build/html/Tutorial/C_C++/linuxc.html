@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python样例" href="../Python/index.html" />
+    <link rel="next" title="Python" href="../Python/index.html" />
     <link rel="prev" title="1. Windows下C/C++示例" href="windowsc.html" /> 
 
   
@@ -82,29 +82,29 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">C/C++示例</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C/C++</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="windowsc.html">1. Windows下C/C++示例</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2. Linux下C/C++示例</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
@@ -158,7 +158,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">C/C++示例</a> &raquo;</li>
+          <li><a href="index.html">C/C++</a> &raquo;</li>
         
       <li>2. Linux下C/C++示例</li>
     
@@ -181,7 +181,35 @@
             
   <div class="section" id="linuxc-c">
 <h1>2. Linux下C/C++示例<a class="headerlink" href="#linuxc-c" title="Permalink to this headline">¶</a></h1>
-<p>linux C/C++基本说明</p>
+<ul class="simple">
+<li>在linux下运行</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">将SDK文件包中linux下的对应版本的libdmcam.so拷贝到/usr/lib目录下</p>
+</li>
+<li><p class="first">如果没有安装cmake，需要打开终端，安装cmake:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">cmake</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">在linux/sample/c下新建文件夹build，在终端运行下面命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Unix Makefiles&quot;</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>生成可执行文件后，运行sample_capture_frames采集样例程序如图</p>
+<img alt="../../_images/lin_C1.jpg" src="../../_images/lin_C1.jpg" />
+<p>运行sample_set_param参数样例程序如图</p>
+<img alt="../../_images/lin_C2.jpg" src="../../_images/lin_C2.jpg" />
+<p>运行sample_save_replay保存录像样例程序如图</p>
+<img alt="../../_images/lin_C3.jpg" src="../../_images/lin_C3.jpg" />
+<p>运行录像样例会生成一个名为sample_replay.oni文件,可以通过SmartToFViewer工具进行回放。
+生成的录像文件如下图所示</p>
+<img alt="../../_images/lin_C4.jpg" src="../../_images/lin_C4.jpg" />
+<p>C++的样例程序的使用跟C一样，具体过程可以参考以上C的使用过程。</p>
 </div>
 
 
@@ -192,7 +220,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Python/index.html" class="btn btn-neutral float-right" title="Python样例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../Python/index.html" class="btn btn-neutral float-right" title="Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="windowsc.html" class="btn btn-neutral" title="1. Windows下C/C++示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
