@@ -1,4 +1,4 @@
-Python样例
+Python
 =================
 
 .. toctree::

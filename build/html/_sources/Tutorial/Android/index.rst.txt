@@ -1,4 +1,4 @@
-Android示例
+Android
 ====================
 
 .. toctree::

@@ -8,19 +8,19 @@ Welcome to smarttof's documentation!
 
 .. toctree::
    :maxdepth: 3
-   :caption: 介绍
+   :caption: 介绍(Introduction)
 
    Introduction/index.rst
    
 .. toctree::
    :maxdepth: 3
-   :caption: 开始
+   :caption: 开始(GettingStart)
 
    GettingStart/index.rst
    
 .. toctree::
    :maxdepth: 3
-   :caption: 样例指南
+   :caption: 教程(Tutorial)
 
    Tutorial/C_C++/index.rst
    Tutorial/Python/index.rst
@@ -32,7 +32,7 @@ Welcome to smarttof's documentation!
    
 .. toctree::
    :maxdepth: 3
-   :caption: 详细说明
+   :caption: 详细参考(Reference)
 
    Reference/C_C++/index.rst
    Reference/Python/index.rst   

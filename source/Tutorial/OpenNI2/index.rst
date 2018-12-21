@@ -1,4 +1,4 @@
-Openni2示例
+Openni2
 ====================
 
 .. toctree::
