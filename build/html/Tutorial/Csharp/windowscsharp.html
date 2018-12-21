@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="2. Linux平台C#样例" href="linuxcsharp.html" />
-    <link rel="prev" title="C#示例" href="index.html" /> 
+    <link rel="prev" title="C#" href="index.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,19 +82,19 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python样例</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">C#示例</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C#</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. Windows平台C#样例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#c-basic">1.1. C# basic样例展示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#c-ui">1.2. C# UI样例展示</a></li>
@@ -103,12 +103,12 @@
 <li class="toctree-l2"><a class="reference internal" href="linuxcsharp.html">2. Linux平台C#样例</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
@@ -162,7 +162,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">C#示例</a> &raquo;</li>
+          <li><a href="index.html">C#</a> &raquo;</li>
         
       <li>1. Windows平台C#样例</li>
     
@@ -185,12 +185,28 @@
             
   <div class="section" id="windowsc">
 <h1>1. Windows平台C#样例<a class="headerlink" href="#windowsc" title="Permalink to this headline">¶</a></h1>
-<p>windows Csharp基本说明</p>
+<ol class="arabic">
+<li><p class="first">命令行进入到windowssamplescsharp目录运行下面的命令,&lt;BUILD_TYPE&gt;可以是Release或者Debug:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">G</span> <span class="s2">&quot;Visual Studio 12 2013&quot;</span>         <span class="o">//</span><span class="n">根据自身所装的vs版本</span>
+<span class="n">cd</span> <span class="o">..</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">./</span><span class="n">build</span> <span class="o">--</span><span class="n">config</span> <span class="o">&lt;</span><span class="n">BUILD_TYPE</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>在build文件下生成了sample_basic.exe和sample_ui.exe两个可执行文件，如下图</p>
+<img alt="../../_images/win_Cs1.jpg" src="../../_images/win_Cs1.jpg" />
 <div class="section" id="c-basic">
 <h2>1.1. C# basic样例展示<a class="headerlink" href="#c-basic" title="Permalink to this headline">¶</a></h2>
+<p>运行生成的sample_basic.exe程序，运行结果如下图</p>
+<img alt="../../_images/win_Cs2.jpg" src="../../_images/win_Cs2.jpg" />
 </div>
 <div class="section" id="c-ui">
 <h2>1.2. C# UI样例展示<a class="headerlink" href="#c-ui" title="Permalink to this headline">¶</a></h2>
+<p>运行生成的sample_ui.exe程序，运行结果和gui界面如下图</p>
+<img alt="../../_images/win_Cs3.jpg" src="../../_images/win_Cs3.jpg" />
 </div>
 </div>
 
@@ -205,7 +221,7 @@
         <a href="linuxcsharp.html" class="btn btn-neutral float-right" title="2. Linux平台C#样例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="C#示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="C#" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

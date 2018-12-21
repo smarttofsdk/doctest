@@ -1,7 +1,8 @@
 Windows下C/C++示例
 =====================
 
-* 在windows下生成vs工程
+在windows下生成vs工程
++++++++++++++++++++++++++
 
 #. 在windows/samples/c下新建文件夹vsbuild
 #. 使用命令行工具或者msys2下mingw工具，进入vsbuild使用cmake生成vs工程，具体命令如下::
@@ -21,7 +22,8 @@ Windows下C/C++示例
 
 其他生成的几个sample程序同样可以运行，运行效果跟windows生成的可执行文件效果一样，具体可查看下面的附图。
 
-* 在windows下生成可执行文件
+在windows下生成可执行文件
+++++++++++++++++++++++++++++
 
 #. 在windows\samples\c下新建文件夹build
 #. 进入build使用cmake生成可执行文件，具体命令参考如下::

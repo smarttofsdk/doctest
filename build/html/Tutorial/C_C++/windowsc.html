@@ -93,7 +93,11 @@
 <p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">C/C++</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Windows下C/C++示例</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Windows下C/C++示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windowsvs">1.1. 在windows下生成vs工程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">1.2. 在windows下生成可执行文件</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="linuxc.html">2. Linux下C/C++示例</a></li>
 </ul>
 </li>
@@ -181,9 +185,8 @@
             
   <div class="section" id="windowsc-c">
 <h1>1. Windows下C/C++示例<a class="headerlink" href="#windowsc-c" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li>在windows下生成vs工程</li>
-</ul>
+<div class="section" id="windowsvs">
+<h2>1.1. 在windows下生成vs工程<a class="headerlink" href="#windowsvs" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">在windows/samples/c下新建文件夹vsbuild</p>
 </li>
@@ -202,9 +205,9 @@
 <p>成功生成VS工程后，使用VS打开工程，生成解决方案，下图展示了生成解决方案后，运行sample_capture_frames程序</p>
 <img alt="../../_images/win_C2.jpg" src="../../_images/win_C2.jpg" />
 <p>其他生成的几个sample程序同样可以运行，运行效果跟windows生成的可执行文件效果一样，具体可查看下面的附图。</p>
-<ul class="simple">
-<li>在windows下生成可执行文件</li>
-</ul>
+</div>
+<div class="section" id="windows">
+<h2>1.2. 在windows下生成可执行文件<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">在windowssamplesc下新建文件夹build</p>
 </li>
@@ -230,6 +233,7 @@
 <img alt="../../_images/win_C6.jpg" src="../../_images/win_C6.jpg" />
 <p>运行录像样例会生成一个名为sample_replay.oni文件,可以通过SmartToFViewer工具进行回放。</p>
 <p>C++的样例程序的使用跟C一样，具体过程可以参考以上C的使用过程。</p>
+</div>
 </div>
 
 

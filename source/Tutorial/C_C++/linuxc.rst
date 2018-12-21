@@ -1,8 +1,6 @@
 Linux下C/C++示例
 ===================
 
-* 在linux下运行
-
 #. 将SDK文件包中linux下的对应版本的libdmcam.so拷贝到/usr/lib目录下
 
 #. 如果没有安装cmake，需要打开终端，安装cmake::
