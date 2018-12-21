@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ROS样例" href="../ROS/index.html" />
+    <link rel="next" title="ROS" href="../ROS/index.html" />
     <link rel="prev" title="1. Windows平台Java样例" href="windowsjava.html" /> 
 
   
@@ -82,33 +82,33 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Java示例</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Java</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="windowsjava.html">1. Windows平台Java样例</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2. Linux平台Java样例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#java-basic">2.1. Java Basic样例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#java-ui">2.2. Java UI样例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-basic">2.1. 运行Java Basic样例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#java-ui">2.2. 运行Java UI样例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
@@ -162,7 +162,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Java示例</a> &raquo;</li>
+          <li><a href="index.html">Java</a> &raquo;</li>
         
       <li>2. Linux平台Java样例</li>
     
@@ -185,12 +185,39 @@
             
   <div class="section" id="linuxjava">
 <h1>2. Linux平台Java样例<a class="headerlink" href="#linuxjava" title="Permalink to this headline">¶</a></h1>
-<p>linux java样例内容添加</p>
+<ol class="arabic">
+<li><p class="first">在linux下安装openjdk-7-jdk用于java扩展:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">openjdk</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">jdk</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">在SDK中的linux/java目录下的对应位数的java包拷贝到linux/samples/java目录，</p>
+</li>
+<li><p class="first">运行javac命令进行编译:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>javac –cp .:dmcam.jar ./com/smarttof/dmcam/sample/sampleBasic.java
+javac –cp .:dmcam.jar ./com/smarttof/dmcam/sample/sampleBasicUi.java
+</pre></div>
+</div>
+<p>编译成功后，在linux/samples/java/com/smarttof/dmcam/sample下有相应的class文件生成</p>
+</li>
+</ol>
 <div class="section" id="java-basic">
-<h2>2.1. Java Basic样例<a class="headerlink" href="#java-basic" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. 运行Java Basic样例<a class="headerlink" href="#java-basic" title="Permalink to this headline">¶</a></h2>
+<p>在linux/samples/java目录中java目录运行，如果有些动态库没有找到，需要指定LD_LIBRARY_PATH:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd) java –cp .:dmcam.jar com.smarttof.dmcam.sample.sampleBasic
+</pre></div>
+</div>
+<p>程序运行的结果如下图</p>
+<img alt="../../_images/lin_J1.jpg" src="../../_images/lin_J1.jpg" />
 </div>
 <div class="section" id="java-ui">
-<h2>2.2. Java UI样例<a class="headerlink" href="#java-ui" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. 运行Java UI样例<a class="headerlink" href="#java-ui" title="Permalink to this headline">¶</a></h2>
+<p>在linux/samples/java目录中java目录运行，如果有些动态库没有找到，需要指定LD_LIBRARY_PATH:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd) java –cp .:dmcam.jar com.smarttof.dmcam.sample.sampleBasicUi
+</pre></div>
+</div>
+<p>程序运行的结果如下图</p>
+<img alt="../../_images/lin_J2.jpg" src="../../_images/lin_J2.jpg" />
 </div>
 </div>
 
@@ -202,7 +229,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ROS/index.html" class="btn btn-neutral float-right" title="ROS样例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../ROS/index.html" class="btn btn-neutral float-right" title="ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="windowsjava.html" class="btn btn-neutral" title="1. Windows平台Java样例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
