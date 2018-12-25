@@ -7,20 +7,23 @@ Welcome to smarttof's documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 介绍(Introduction)
+   :name: sec-general
 
    Introduction/index.rst
    
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 开始(GettingStart)
+   :name: sec-start
 
    GettingStart/index.rst
    
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 教程(Tutorial)
+   :name: sec-tutorial
 
    Tutorial/C_C++/index.rst
    Tutorial/Python/index.rst
@@ -33,6 +36,7 @@ Welcome to smarttof's documentation!
 .. toctree::
    :maxdepth: 1
    :caption: 详细参考(Reference)
+   :name: sec-reference
 
    Reference/C_C++/index.rst
    Reference/Python/index.rst   

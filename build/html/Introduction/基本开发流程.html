@@ -82,29 +82,40 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">概述</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="概述.html">1. 概述</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. 基本开发流程</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. 基本开发流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.1. 模组基本性能评估</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.2. 模组样例集成开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.3. 模组算法评估开发</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.3.1. 录像文件获取</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.3.2. 离线算法评估</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2.3.3. 在线算法评估</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.3.4. 实际平台应用</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/Python/index.html">Python扩展</a></li>
@@ -179,9 +190,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>2. 基本开发流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>第一张基本开发流程内容说明</p>
+  <div class="section" id="doc-grip">
+<span id="id1"></span><h1>2. 基本开发流程<a class="headerlink" href="#doc-grip" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>2.1. 模组基本性能评估<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>在获得SmartToF模组后，可以先使用SDK中相关平台下tools目录中的SmartToFViewer工具来采集显示被测物体，
+评估被测物体的成像效果、深度距离等信息。通过调节SmartToFViewer上的相关参数后的结果，作为对于SmartToF模组
+成像和测量能力的基本依据。SDK中提供了SmartToF_PCLViewer.exe</p>
+</div>
+<div class="section" id="id3">
+<h2>2.2. 模组样例集成开发<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>经过SmartToFViewer的简单使用评估后，用户可以按照SDK中的样例说明运行相关的样例，了解各平台和不通开发语言环境
+下使用SDK中主要步骤，参考SDK的相关样例代码，相关代码中的API参数可以阅读文档中的详细扩展说，编写集成自己的测
+试样例进行模组数据的采集和显示。</p>
+<ul class="simple">
+<li>C/C++用户通过将对应平台包下lib包中的libdmcam.dll等文件或者linux下的libdmcam.so拷贝加入到自己的工程中，满足
+SmartToF的相关API的条用</li>
+<li>Python用户需要安装对应python平台的dmcam包来调用SmartToF模组相关API，安装包的具体过程参考Tutorial部分的python
+样例部分</li>
+<li>Java用户需要将SDK中的java包dmcam.jar和dmcam_java.dll或者linux下的dmcam.jar和dmcam_java.so拷贝加入到自己的工程。</li>
+<li>C#用户需要将SDK中的csharp包中的dmcam_csharp.dll、dmcam_csharp_adapter.dll、libdmcam.dll或者linux下的dmcam_csharp.dll、
+libdmcam.so、libdmcam_csharp_adapter.so拷贝加入到自己的工程中。</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>2.3. 模组算法评估开发<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>为了方便快速使用smarttof模组进行算法开发，SmartToF SDK提供了一套完整的开发使用流程说明，通过将流程分为四个阶段，
+每一阶段的成果作为下一阶段的准备，最后整合到用户自己相关的平台中。</p>
+<div class="section" id="id5">
+<h3>2.3.1. 录像文件获取<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>在进行算法评估时，首先是要获得准确的图像数据。针对前期没有模组或者不确定采集的图像数据是否正确的情况下，
+可以先期通过smarttofviewer的录像功能获取，也可以通过dmcam-cli工具的rx命令采集，如何使用Smarttofviewer的录像功能录制录像文件
+和使用dmcam-cli工具的rx命令采集保存录像文件参考扩展说明中的工具详细说明。</p>
+</div>
+<div class="section" id="id6">
+<h3>2.3.2. 离线算法评估<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>即使暂时没有SmartToF系列模组，用户也可以预先在录像文件上进行算法的验证。通过读取原始录像文件数据，加载运行要评估的算法进行运行，
+再查看加入算法后的实际效果。如要对原始深度数据进行滤波，可以加入常用的中值或者双边滤波，也可以是改进后的深度滤波，通过滤波前后的图像效果评估算法效果。
+这种离线算法评估解决了部分用户在没有模组或者未能正常采集模组数据的情况下，提前进入到算法的相关评估工作。</p>
+</div>
+<div class="section" id="id7">
+<h3>2.3.3. 在线算法评估<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>通过前期在离线录像文件上的算法评估后，基本确定算法的功能和效果，评估算法是否能够达到设计要求。实现离线文件评估后，
+下一步就是动态的实际评估算法的效果。通过在应用中采集SmartToF模组的实时数据，同时加入前面离线评估的算法处理，
+实时观察和评测算法在pc上的实际效果，最终确定在SmartToF上使用的算法是否的确满足使用要求。</p>
+</div>
+<div class="section" id="id8">
+<h3>2.3.4. 实际平台应用<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>前期的离线算法评估和在线算法评估基本上都是基于PC平台，在实际应用中，SmartToF模组可能运行在各种不同的嵌入式平台。
+这时需要在对应得平台上运行相应的SmartToF的库，并且将前面的评估算法移植到对应得平台，并根据平台对算法进行相应的
+优化，最后在实际的嵌入式平台上进行应用开发。</p>
+</div>
+</div>
 </div>
 
 

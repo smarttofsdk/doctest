@@ -82,29 +82,34 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">概述</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 概述</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#smarttof">1.1. SmartToF模组介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smartof-sdk">1.2. SmarToF SDK介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdk">1.3. SDK文档说明</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="基本开发流程.html">2. 基本开发流程</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/Python/index.html">Python扩展</a></li>
@@ -181,7 +186,99 @@
             
   <div class="section" id="id1">
 <h1>1. 概述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>第一张概述内容填写</p>
+<p>欢迎来到SmartToF模组的SDK文档，通过这个文档你可以了解到SmartToF系列模组配套SDK包含的内容、SDK中工具的使用方法、SmartToF模组
+二次开发时的一般过程以及相关API的使用说明。</p>
+<div class="section" id="smarttof">
+<h2>1.1. SmartToF模组介绍<a class="headerlink" href="#smarttof" title="Permalink to this headline">¶</a></h2>
+<p>SmartToF TC系列模组是数迹公司采用TOF技术开发的3D视觉模组，采用业界领先的传感器芯片，具有测量精度高、
+抗干扰能力强、外观小巧等优点。模组可用于精确的人流统计、物流仓储、手势识别、机器人避障和车载控制等新兴技术领域。</p>
+</div>
+<div class="section" id="smartof-sdk">
+<h2>1.2. SmarToF SDK介绍<a class="headerlink" href="#smartof-sdk" title="Permalink to this headline">¶</a></h2>
+<p>SmartToF SDK是配套SmartToF系列模组进行开发的软件工具包，支持windows、linux、Android等主流平台，如下表1所示，
+提供了多种环境的应用示例和友好的API接口。</p>
+<table border="1" class="colwidths-given docutils" id="id2">
+<caption><span class="caption-text">表1 SDK支持说明</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="28%" />
+<col width="22%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">内容</th>
+<th class="head">Windows</th>
+<th class="head">Linux</th>
+<th class="head">Android</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>核心API C库</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr class="row-odd"><td>Python</td>
+<td>*</td>
+<td>*</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>java</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr class="row-odd"><td>ROS</td>
+<td>&#160;</td>
+<td>*</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>C#</td>
+<td>*</td>
+<td>*</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>MATLAB</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>USB driver</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr class="row-odd"><td>SmartTofAnalyzer</td>
+<td>*</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>SmartTofCli</td>
+<td>*</td>
+<td>*</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>SmartTofViewer</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sdk">
+<h2>1.3. SDK文档说明<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h2>
+<p>本SDK文档说明是由数迹公司人员持续编写、校正、修改的，本文档主要包括四个部分，每个部分的内容根据实际
+情况分布，每个部分的内容是相对直观的。</p>
+<ul class="simple">
+<li><a class="reference internal" href="../index.html#sec-general"><span class="std std-ref">介绍(Introduction)</span></a> 部分概述了对SmartToF模组和SDK的总体介绍，列出了SDK的相关资源，
+概述还包含了SmartToF模组的 <a class="reference internal" href="基本开发流程.html#doc-grip"><span class="std std-ref">基本开发流程</span></a>。</li>
+<li><a class="reference internal" href="../index.html#sec-start"><span class="std std-ref">开始(GettingStart)</span></a> 部分包含使用平台快速搭建、工具的相关使用。</li>
+<li><a class="reference internal" href="../index.html#sec-tutorial"><span class="std std-ref">教程(Tutorial)</span></a> 教程部分展示了在主要平台下配套SDK样例的使用和相关图示，样例中的部分代码可以作为二次开发时参考。</li>
+<li><a class="reference internal" href="../index.html#sec-reference"><span class="std std-ref">详细参考(Reference)</span></a> 对SDK中核心API库、python、Java、C#、ros和Android等作了扩展说明，在进行模组的二次开发时，
+如果需要了解详细的信息，可以从本章内容中找到。</li>
+</ul>
+</div>
 </div>
 
 
