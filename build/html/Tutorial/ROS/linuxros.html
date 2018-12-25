@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Openni2示例" href="../OpenNI2/index.html" />
-    <link rel="prev" title="ROS样例" href="index.html" /> 
+    <link rel="next" title="Openni2" href="../OpenNI2/index.html" />
+    <link rel="prev" title="ROS" href="index.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -82,33 +82,36 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">概述</a></li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../GettingStart/index.html">快速入门</a></li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java示例</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">ROS样例</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ROS</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. ROS基本样例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#smarttof-ros">1.1. smarttof ROS深度图显示</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">1.2. smarttof ROS灰度图显示</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">1.3. smarttof ROS点云显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubunturos">1.1. Ubuntu下安装ros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.2. ROS环境配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smarttof-ros">1.3. SmartToF ros包编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.4. smarttof ROS深度图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.5. smarttof ROS灰度图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.6. smarttof ROS点云显示</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Reference/Python/index.html">Python扩展</a></li>
@@ -162,7 +165,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">ROS样例</a> &raquo;</li>
+          <li><a href="index.html">ROS</a> &raquo;</li>
         
       <li>1. ROS基本样例</li>
     
@@ -185,15 +188,152 @@
             
   <div class="section" id="ros">
 <h1>1. ROS基本样例<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h1>
-<p>linux ros 基本样例内容添加</p>
-<div class="section" id="smarttof-ros">
-<h2>1.1. smarttof ROS深度图显示<a class="headerlink" href="#smarttof-ros" title="Permalink to this headline">¶</a></h2>
+<p>SDK中提供ros包，主要包括ros系统对smarttof API的封装，
+ros中包含有dmcam_ros和cloud_viewer两个包，
+dmcam_ros包用来采集与显示深度、灰度数据和动态修改参数，
+cloud_viewer包是一个示例，用来显示点云数据。运行ros中的样例步骤如下：</p>
+<div class="section" id="ubunturos">
+<h2>1.1. Ubuntu下安装ros<a class="headerlink" href="#ubunturos" title="Permalink to this headline">¶</a></h2>
+<p>ubuntu下安装ros过程如下：</p>
+<ol class="arabic">
+<li><p class="first">打开命令行终端，进入SDK中的ros文件夹中，运行如下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">755</span> <span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">出现如下图所示的安装选择版本，手动输入版本名称后按回车开始安装，Ubuntu14.04推荐使用indigo，Ubuntu16.04推荐使用kinetic。</p>
+<blockquote>
+<div><img alt="../../_images/lin_R1.jpg" src="../../_images/lin_R1.jpg" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="id1">
-<h2>1.2. smarttof ROS灰度图显示<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>1.2. ROS环境配置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>每次使用ROS系统前需要初始化安装版本的环境变量，
+以Kinetic为例，Kinetic默认安装在/opt/ros/kinetic/目录下，
+该环境变量配置文件位置/opt/ros/kinetic/setup.bash,每次使用前需要初始化ros环境，命令如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>为了简化配置环境变量的过程，可以选择把环境变量的配置放在~/.bashrc文件中，
+这样每次打开一个新终端的时候，ROS的环境变量会自动配置好:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source /opt/ros/kinetic/setup.bash&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="smarttof-ros">
+<h2>1.3. SmartToF ros包编译<a class="headerlink" href="#smarttof-ros" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">进入ros所在目录，通过ls命令查看目录中文件如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>  <span class="n">Makefile</span>  <span class="n">src</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">使用catkin_make(Makefile中实现了catkin_make使用的步骤，也可以使用make命令来编译):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">kinetic</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span><span class="p">(</span><span class="n">未在bashrc中设置初始化环境需要这一步</span><span class="p">)</span>
+<span class="n">catkin_make</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">编译完成后会生成devel和build目录，通过ls命令查看编译生成的文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">build</span>  <span class="n">devel</span>  <span class="n">install_ros</span><span class="o">.</span><span class="n">sh</span>  <span class="n">Makefile</span>  <span class="n">src</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">初始化devel中的环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </div>
 <div class="section" id="id2">
-<h2>1.3. smarttof ROS点云显示<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. smarttof ROS深度图显示<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dmcam_ros</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">显示深度图命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">image_view</span> <span class="n">image_view</span> <span class="n">image</span><span class="p">:</span><span class="o">=/</span><span class="n">smarttof</span><span class="o">/</span><span class="n">image_dist</span>
+</pre></div>
+</div>
+<p>深度图像显示如下：</p>
+<img alt="../../_images/lin_R2.jpg" src="../../_images/lin_R2.jpg" />
+</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>1.5. smarttof ROS灰度图显示<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">dmcam_ros</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">显示灰度图命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">image_view</span> <span class="n">image_view</span> <span class="n">image</span><span class="p">:</span><span class="o">=/</span><span class="n">smarttof</span><span class="o">/</span><span class="n">image_gray</span>
+</pre></div>
+</div>
+<p>灰度图像显示如下：</p>
+<img alt="../../_images/lin_R3.jpg" src="../../_images/lin_R3.jpg" />
+</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>1.6. smarttof ROS点云显示<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>cloud_viewer是一个简单的使用smarttof ros来显示点云数据的样例，
+这个样例简单的实现了怎么从smarttof ros发布的话题pointcloud中获取点云数据并显示出来。</p>
+<ol class="arabic">
+<li><p class="first">开启ROS环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roscore</span><span class="o">&amp;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">进入ros所在文件夹初始化环境变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">./</span><span class="n">devel</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">运行launch文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">cloud_viewer</span> <span class="n">start</span><span class="o">.</span><span class="n">launch</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">显示点云图像</p>
+<blockquote>
+<div><img alt="../../_images/lin_R4.jpg" src="../../_images/lin_R4.jpg" />
+</div></blockquote>
+</li>
+<li><p class="first">通过鼠标中间的滑轮和鼠标左键调整点云显示图像，最终效果如图</p>
+<blockquote>
+<div><img alt="../../_images/lin_R5.jpg" src="../../_images/lin_R5.jpg" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 </div>
 
@@ -205,10 +345,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../OpenNI2/index.html" class="btn btn-neutral float-right" title="Openni2示例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../OpenNI2/index.html" class="btn btn-neutral float-right" title="Openni2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="ROS样例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

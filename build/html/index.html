@@ -251,9 +251,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorial/ROS/index.html">ROS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Tutorial/ROS/linuxros.html">1. ROS基本样例</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#smarttof-ros">1.1. smarttof ROS深度图显示</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id1">1.2. smarttof ROS灰度图显示</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id2">1.3. smarttof ROS点云显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#ubunturos">1.1. Ubuntu下安装ros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id1">1.2. ROS环境配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#smarttof-ros">1.3. SmartToF ros包编译</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id2">1.4. smarttof ROS深度图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id3">1.5. smarttof ROS灰度图显示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/linuxros.html#id4">1.6. smarttof ROS点云显示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial/ROS/rosrviz.html">2. ROS rviz工具使用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/rosrviz.html#rviz">2.1. rviz使用前准备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/rosrviz.html#id1">2.2. rviz显示深度图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Tutorial/ROS/rosrviz.html#id2">2.3. rviz显示点云图像</a></li>
 </ul>
 </li>
 </ul>
@@ -276,39 +285,13 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Reference/C_C++/index.html">C/C++扩展说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/C_C++/windowsc.html">1. Windows下C/C++扩展介绍</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reference/C_C++/linuxc.html">2. C/C++扩展API说明</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/Python/index.html">Python扩展</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Python/windowspython.html">1. Windows平台Python扩展</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Python/linuxpython.html">2. Linux平台Python扩展</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/Csharp/index.html">C#扩展说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Csharp/windowscsharp.html">1. Windows平台C#扩展</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Csharp/linuxcsharp.html">2. Linux平台C#扩展</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/Java/index.html">Java扩展</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Java/windowsjava.html">1. Windows平台java扩展</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Java/linuxjava.html">2. Linux平台Java扩展</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/ROS/index.html">ROS扩展</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/ROS/linuxros.html">1. ROS扩展</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/tools/index.html">工具详细说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/tools/SmartToFViewer.html">1. SmartToFViewer详细说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reference/tools/SmartToFCli.html">2. SmartToFCli详细说明</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Reference/Android/index.html">Android扩展说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Reference/Android/Androidapk.html">1. Android扩展介绍</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/C_C++/index.html">C/C++扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/Python/index.html">Python扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/Csharp/index.html">C#扩展说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/Java/index.html">Java扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/ROS/index.html">ROS扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/tools/index.html">工具详细说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference/Android/index.html">Android扩展说明</a></li>
 </ul>
 </div>
 </div>

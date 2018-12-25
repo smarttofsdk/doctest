@@ -31,7 +31,7 @@ Welcome to smarttof's documentation!
    Tutorial/Android/index.rst
    
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 详细参考(Reference)
 
    Reference/C_C++/index.rst

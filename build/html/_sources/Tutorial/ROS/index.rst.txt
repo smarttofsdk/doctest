@@ -7,3 +7,4 @@ ROS
    :numbered:
    
    linuxros.rst
+   rosrviz.rst
