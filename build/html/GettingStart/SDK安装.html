@@ -82,29 +82,42 @@
               
             
             
-              <p class="caption"><span class="caption-text">介绍</span></p>
+              <p class="caption"><span class="caption-text">介绍(Introduction)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Introduction/index.html">概述</a></li>
 </ul>
-<p class="caption"><span class="caption-text">开始</span></p>
+<p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">快速入门</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 平台安装</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 平台安装</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">1.1. windows下安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.1.1. 推荐系统配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.1.2. 模组准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.1.3. 模组安装</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">1.2. linux下安装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#libusb">1.2.1. libusb的安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1.2.2. libusb权限修改</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="工具使用.html">2. 工具使用相关</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">样例指南</span></p>
+<p class="caption"><span class="caption-text">教程(Tutorial)</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/C_C++/index.html">C/C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Csharp/index.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Java/index.html">Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/ROS/index.html">ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/OpenNI2/index.html">Openni2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorial/Android/index.html">Android</a></li>
 </ul>
-<p class="caption"><span class="caption-text">详细说明</span></p>
+<p class="caption"><span class="caption-text">详细参考(Reference)</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/C_C++/index.html">C/C++扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Reference/Python/index.html">Python扩展</a></li>
@@ -181,7 +194,90 @@
             
   <div class="section" id="id1">
 <h1>1. 平台安装<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>SDK各平台安装内容说明填充</p>
+<div class="section" id="windows">
+<h2>1.1. windows下安装<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>在windows下连接使用模组时，需要安装模组的usb驱动，模组的一般安装流程如下：</p>
+<div class="section" id="id2">
+<h3>1.1.1. 推荐系统配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">配置项</th>
+<th class="head">推荐配置</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">操作系统</td>
+<td>Windows: Win7 32/64位 Win10 32/64位</td>
+</tr>
+<tr class="row-odd"><td>Linux: Ubuntu14.04 64位 Ubuntu16.04 64位</td>
+</tr>
+<tr class="row-even"><td>内存</td>
+<td>4G及以上</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h3>1.1.2. 模组准备<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>模组套件包括TC系列模组、MicroUSB线和电源（部分型号无需电源）如表2所示</p>
+<table border="1" class="colwidths-given docutils" id="id6">
+<caption><span class="caption-text">表2 模组套件</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="23%" />
+<col width="31%" />
+<col width="46%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>1</td>
+<td>TC系列模组</td>
+<td><a class="first last reference internal image-reference" href="../_images/win_G1.jpg"><img alt="../_images/win_G1.jpg" src="../_images/win_G1.jpg" style="width: 100px;" /></a>
+</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Micro USB电缆</td>
+<td><a class="first last reference internal image-reference" href="../_images/win_G2.jpg"><img alt="../_images/win_G2.jpg" src="../_images/win_G2.jpg" style="width: 100px;" /></a>
+</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>12V 电源</td>
+<td><a class="first last reference internal image-reference" href="../_images/win_G3.jpg"><img alt="../_images/win_G3.jpg" src="../_images/win_G3.jpg" style="width: 100px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h3>1.1.3. 模组安装<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>在windows系统下，运行SDK中windows/drivers目录下的smarttof_usb_install.exe程序进行驱动的安装，正常安装过程如下图所示</p>
+<img alt="../_images/win_G4.jpg" src="../_images/win_G4.jpg" />
+<p>驱动正常安装后，将USB电缆连接模组和PC,打开设备管理器中可以看到模组的设备名，如下图所示</p>
+<img alt="../_images/win_G5.jpg" src="../_images/win_G5.jpg" />
+</div>
+</div>
+<div class="section" id="linux">
+<h2>1.2. linux下安装<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="libusb">
+<h3>1.2.1. libusb的安装<a class="headerlink" href="#libusb" title="Permalink to this headline">¶</a></h3>
+<p>在使用Linux的发行版ubuntu14和ubuntu16时，默认自带libusb，无需安装usb驱动，如果需要重装libusb,
+删除原来的libusb后，在终端中重新输入命令进行安装:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>然后运行SDK目录边tool/SmartTofViewer目录下的smartTOFViewer工具查看设备是否连接正常，正常连接如下图
+所示显示设备号</p>
+<img alt="../_images/win_G6.jpg" src="../_images/win_G6.jpg" />
+</div>
+<div class="section" id="id5">
+<h3>1.2.2. libusb权限修改<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>为了便于每次使用模组时，不用重复输入密码，需要给usb增加相应的规则，SDK中已经提供规则设置脚本，
+只要运行在linux/lib目录下的setup.sh脚本，运行脚本过程如下图</p>
+<img alt="../_images/win_G7.jpg" src="../_images/win_G7.jpg" />
+</div>
+</div>
 </div>
 
 
