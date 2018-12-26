@@ -6,5 +6,5 @@ Python扩展
    :name: tof-Reference
    :numbered:
    
-   windowspython.rst
-   linuxpython.rst
+   python接口说明.rst
+   配套代码说明.rst

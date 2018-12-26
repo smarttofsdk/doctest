@@ -1,0 +1,100 @@
+python中参数设置和滤波相关
+=================================
+
+这里介绍在python中相关参数的设置读取和滤波功能的开启关闭。
+
+python下参数设置和读取
++++++++++++++++++++++++++++++++
+
+* 单个参数设置，如设置帧格式::
+
+	wparams_fmt = {dmcam.PARAM_FRAME_FORMAT: dmcam.param_val_u()}
+	wparams_fmt[dmcam.PARAM_FRAME_FORMAT].frame_format.format = 2
+	if not dmcam.param_batch_set(dev, wparams_fmt):
+		log.error(" frame format failed")
+		
+* 单个参数读取，如读取积分时间::
+
+	param_val = dmcam.param_batch_get(dev, [dmcam.PARAM_INTG_TIME])
+	param_intg_us = param_val.intg.intg_us
+	
+python下滤波功能开启和关闭
++++++++++++++++++++++++++++++++
+
+* 像素校准，用于深度数据校正::
+
+	drnu_param = dmcam.filter_args_u()
+	drnu_param.case_idx = 0  #  12MHz calibaration
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_PIXEL_CALIB, drnu_param, 0)	#使能像素校准
+	
+	dmcam.filter_disable(dev, dmcam.DMCAM_FILTER_ID_PIXEL_CALIB)	#关闭像素校准
+	
+* 深度滤波，用于深度数据滤波::
+
+	filter_param = dmcam.filter_args_u()
+	filter_param.median_ksize = 3		# 深度滤波通常设置值
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_MEDIAN, filter_param, sys.getsizeof(filter_param))	#使能深度滤波
+	
+	dmcam.filter_disable(dev, dmcam.DMCAM_FILTER_ID_MEDIAN)	#关闭深度滤波
+	
+* 幅值滤波，用于过滤质量差的点::
+	
+	amp_min_val = dmcam.filter_args_u()
+	amp_min_val.min_amp = 30	#设置最小幅值滤波的阈值
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_AMP, amp_min_val, sys.getsizeof(amp_min_val))    #使能幅值滤波
+	
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_AMP)		#关闭幅值滤波
+	
+* 自动积分时间，开启模组根据被测物自动调整曝光时间::
+
+	intg_auto_arg = dmcam.filter_args_u()
+	intg_auto_arg.sat_ration = 5	#自动曝光设置的值
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_AUTO_INTG, intg_auto_arg, sys.getsizeof(intg_auto_arg))  #开启自动曝光
+	
+	dmcam.filter_disable(dev,DMCAM_FILTER_ID_AUTO_INTG)		#关闭自动曝光
+	
+* 运动模式0，帧格式设置2::
+	
+	dmfilter = dmcam.filter_args_u()
+	
+	wparams_fmt = {dmcam.PARAM_FRAME_FORMAT: dmcam.param_val_u()}
+	wparams_fmt[dmcam.PARAM_FRAME_FORMAT].frame_format.format = 2	#要设置帧格式为2
+	dmcam.param_batch_set(dev, wparams_fmt)		#进行帧格式参数设置
+	
+	dmfilter.sport_mode = 0		#设置运动模式为0
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_SPORT_MODE, dmfilter, 0)		#开启运动模式0
+	
+	dmcam.filter_disable(dev, dmcam.DMCAM_FILTER_ID_SPORT_MODE)		#关闭运动模式0
+	
+* 运动模式1，帧格式设置4::
+
+	dmfilter = dmcam.filter_args_u()
+	
+	wparams_fmt = {dmcam.PARAM_FRAME_FORMAT: dmcam.param_val_u()}
+	wparams_fmt[dmcam.PARAM_FRAME_FORMAT].frame_format.format = 4 #要设置的帧格式为4
+	dmcam.param_batch_set(dev, wparams_fmt)  #进行帧格式设置
+	
+	dmfilter.sport_mode = 1		#设置运动模式为1
+	dmcam.filter_enable(dev, dmcam.DMCAM_FILTER_ID_SPORT_MODE, dmfilter, 1) 	#开启运动模式1
+	
+	#关闭运动模式1时，帧格式要先恢复到2
+	wparams_fmt = {dmcam.PARAM_FRAME_FORMAT: dmcam.param_val_u()}
+	wparams_fmt[dmcam.PARAM_FRAME_FORMAT].frame_format.format = 2 #恢复帧格式为2
+	dmcam.param_batch_set(dev, wparams_fmt)  #进行帧格式设置	
+	
+	dmcam.filter_disable(dev, dmcam.DMCAM_FILTER_ID_SPORT_MODE)		#关闭运动模式1
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
