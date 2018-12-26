@@ -49,6 +49,11 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
 ]
+
+# ------------Add for md use---------------
+# -----pip install recommonmark-------------
+#---------add line from 57 -69 exclude 64---------------
+
 extensions = ['recommonmark']
 from recommonmark.parser import CommonMarkParser
 source_parsers = {
