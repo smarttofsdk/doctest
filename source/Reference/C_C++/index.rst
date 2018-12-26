@@ -1,10 +1,11 @@
-C/C++扩展说明
-====================
+C/C++核心库(libdmcam)参考
+============================
 
 .. toctree::
    :maxdepth: 1
    :name: tof-Reference
    :numbered:
    
-   windowsc.rst
-   linuxc.rst
+   主要数据类型说明.rst
+   主要API接口说明.rst
+   配套代码说明.rst

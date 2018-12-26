@@ -1,0 +1,107 @@
+参数和滤波代码示例
+=======================
+
+:ref:`doc_param` 已经介绍了模组相关的参数和滤波功能ID,
+下面将说明如何设置及获取模组参数已经使能关闭模组的相关
+滤波功能。
+ 
+模组参数设置和读取
++++++++++++++++++++++
+
+下面以设置和读取模组的曝光时间为例：
+
+* 进行参数设置::
+
+	dmcam_param_item_t wparam;			
+	uint16_t intg_time = 700;			//表示设置积分的大小 范围为0-1500 
+	memset(&wparam,0,sizeof(wparam));
+	wparam.param_id = PARAM_INTG_TIME;	//表示设置的参数为积分时间
+	wparam.param_val_len = sizeof(intg_time);
+	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行单个参数设置
+
+* 进行参数的读取::
+
+	dmcam_param_item_t rparam;
+	memset(&rparam,0,sizeof(rparam));
+	rparam.param_id = PARAM_INTG_TIME;	//表示要读取的参数项为积分时间
+	assert(dmcam_param_batch_get(dev,&rparam,1));	//调用API获取单个参数	
+
+其他模组参数的设置获取参照上面积分时间的设置获取。
+	
+滤波功能开启和关闭
++++++++++++++++++++++
+
+* 像素校准，开启后用于深度数据的矫正::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_PIXEL_CALIB; //像素校准
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启像素校准
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_PIXEL_CALIB); //关闭像素校准
+	
+* 深度滤波，开启后用于对深度数据滤波::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_MEDIAN;	//深度滤波
+	witem.median_ksize = 3;	//深度滤波通常设置值
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启深度滤波
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_MEDIAN);	//关闭深度滤波
+	
+* 幅值滤波，开启后过滤质量差的点::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_AMP;	//最小幅值滤波
+	witem.min_amp = 30;	//设置的最小幅值滤波的阈值
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启最小幅值滤波
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_AMP);	//关闭最小幅值滤波
+	
+* 自动积分时间，开启后根据被测物体的距离自动调整曝光时间大小::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_AUTO_INTG;	//自动曝光
+	witem.sat_ratio = 5;//自动曝光时设置的值
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启自动曝光
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_AUTO_INTG);	//关闭自动曝光
+	
+* 多模组串扰消除，开启消除或者减小多模组同时开启时的串扰::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_SYNC_DELAY;	 //串扰延时
+	witem.sync_delay = 0;	//延时时间设为0时为随机时间
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启串扰延时
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_SYNC_DELAY);	//关闭串扰延时
+
+* 运动模式0，帧格式要设置为2::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_SPORT_MODE;	 //运动模式0
+	dmcam_param_item_t wparam;	
+	uint32_t set_format = 2;	//表示要设置的帧格式为2		
+	memset(&wparam,0,sizeof(wparam));
+	wparam.param_id = PARAM_FRAME_FORMAT;	//表示设置的参数为帧格式
+	wparam.frame_format.format = set_format;	//设置的帧格式为2
+	wparam.param_val_len = sizeof(set_format);
+	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行帧格式参数设置
+	witem.sport_mode = 0;	//设置运动模式为0
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启运动模式0
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_SPORT_MODE);//关闭运动模式0
+	
+* 运动模式1，帧格式要设置为4::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_SPORT_MODE;	 //运动模式1
+	dmcam_param_item_t wparam;	
+	uint32_t set_format = 4;	//表示要设置的帧格式为4		
+	memset(&wparam,0,sizeof(wparam));
+	wparam.param_id = PARAM_FRAME_FORMAT;	//表示设置的参数为帧格式
+	wparam.frame_format.format = set_format;	//设置的帧格式为4
+	wparam.param_val_len = sizeof(set_format);
+	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行帧格式参数设置
+	witem.sport_mode = 1;	//设置运动模式为1
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启运动模式1
+	//关闭运动模式1时，帧格式要先恢复到2
+	set_format = 2;		//帧格式要恢复设置为2
+	wparam.frame_format.format = set_format;	//设置的帧格式的值为2
+	wparam.param_id = PARAM_FRAME_FORMAT;	//表示设置的参数为帧格式
+	wparam.param_val_len = sizeof(set_format);
+	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行帧格式参数设置2
+	dmcam_filter_disable(dev,DMCAM_FILTER_ID_SPORT_MODE);//关闭运动模式1
