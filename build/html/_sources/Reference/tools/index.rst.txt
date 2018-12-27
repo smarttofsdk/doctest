@@ -6,5 +6,4 @@
    :name: tof-Reference
    :numbered:
    
-   SmartToFViewer.rst
-   SmartToFCli.rst
+   viewer.rst

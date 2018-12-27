@@ -38,12 +38,12 @@ Welcome to smarttof's documentation!
    :caption: 详细参考(Reference)
    :name: sec-reference
 
+   Reference/tools/index.rst
    Reference/C_C++/index.rst
    Reference/Python/index.rst   
    Reference/Csharp/index.rst
    Reference/Java/index.rst	
-   Reference/ROS/index.rst
-   Reference/tools/index.rst
+   Reference/ROS/index.rst 
    Reference/Android/index.rst
    
 Indices and tables
