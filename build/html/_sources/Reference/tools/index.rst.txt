@@ -7,3 +7,4 @@
    :numbered:
    
    viewer.rst
+   cliuseguide.rst
