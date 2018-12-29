@@ -13,11 +13,23 @@
 * 进行参数设置::
 
 	dmcam_param_item_t wparam;			
-	uint16_t intg_time = 700;			//表示设置积分的大小 范围为0-1500 
+	uint16_t intg_time = 100;			//表示设置积分的大小 范围为0-1500 
 	memset(&wparam,0,sizeof(wparam));
 	wparam.param_id = PARAM_INTG_TIME;	//表示设置的参数为积分时间
 	wparam.param_val_len = sizeof(intg_time);
+	wparam.param_val.intg.intg_us = intg_time;
 	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行单个参数设置
+
+	dmcam_param_item_t wparam;			
+	uint16_t intg_hdrtime = 700;		//表示设置HDR的积分时间的大小
+	memset(&wparam,0,sizeof(wparam));
+	wparam.param_id = PARAM_HDR_INTG_TIME;	//表示设置的参数为积分时间
+	wparam.param_val_len = sizeof(intg_time);
+	wparam.param_val.intg.intg_us = intg_hdrtime;
+	assert(dmcam_param_batch_set(dev,&wparam,1));	//调用API进行单个参数设置
+
+.. tip::
+    如果hdr的积分时间设置了不为0，则开启了模组的HDR模式。
 
 * 进行参数的读取::
 
@@ -25,6 +37,8 @@
 	memset(&rparam,0,sizeof(rparam));
 	rparam.param_id = PARAM_INTG_TIME;	//表示要读取的参数项为积分时间
 	assert(dmcam_param_batch_get(dev,&rparam,1));	//调用API获取单个参数	
+
+
 
 其他模组参数的设置获取参照上面积分时间的设置获取。
 	
@@ -53,6 +67,20 @@
 	witem.min_amp = 30;	//设置的最小幅值滤波的阈值
 	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u));//开启最小幅值滤波
 	dmcam_filter_disable(dev,DMCAM_FILTER_ID_AMP);	//关闭最小幅值滤波
+	
+* HDR模式，设置一大一小两个积分时间，确保同一个模组在测量远近不同的物体时不会过曝::
+
+	dmcam_filter_args_u witem;
+	dmcam_filter_id_e filter_id = DMCAM_FILTER_ID_HDR;	//HDR 模式
+	witem.intg.intg_3d = 100;	//HDR 模式时小的曝光时间
+	witem.intg.intg_3dhdr = 700;  //HDR 模式时大的曝光时间
+	dmcam_filter_enable(dev,filter_id,&witem,sizeof(dmcam_filter_args_u)); //开启HDR模式
+
+.. tip::
+	开启HDR模式的另一种方法是可以直接通过设置HDR的曝光时间不为0，
+	如上面设置积分的样例。
+	
+	
 	
 * 自动积分时间，开启后根据被测物体的距离自动调整曝光时间大小::
 

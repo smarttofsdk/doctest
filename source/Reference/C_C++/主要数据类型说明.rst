@@ -90,7 +90,7 @@ SmartToF中主要通过模组参数设置和滤波功能设置来控制模组采
 	  - 分别读取传感器上下面左右部分温度和灯板的温度	  
 	* - PARAM_HDR_INTG_TIME
 	  - 0-1500
-	  - 取值同PARAM_INTG_TIME
+	  - 取值同PARAM_INTG_TIME，设置不为0时则开启HDR模式
 	* - PARAM_SYNC_DELAY
 	  - 0ms-6ms
 	  - 
