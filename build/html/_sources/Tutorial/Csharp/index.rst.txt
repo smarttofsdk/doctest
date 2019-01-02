@@ -6,5 +6,6 @@ C#
    :name: tof-Tutorial
    :numbered:
    
-   windowscsharp.rst
-   linuxcsharp.rst
+   Csharpbasic.rst
+   CsharpUI.rst
+   buildcsharp.rst
