@@ -44,6 +44,7 @@ Welcome to smarttof's documentation!
    Reference/Csharp/index.rst
    Reference/Java/index.rst	
    Reference/ROS/index.rst 
+   Reference/OpenNI2/index.rst
    Reference/Android/index.rst
    
 Indices and tables
