@@ -8,3 +8,4 @@ Java
    
    windowsjava.rst
    linuxjava.rst
+   buildjava.rst
