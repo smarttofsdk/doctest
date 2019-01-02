@@ -6,5 +6,7 @@ Python
    :name: tof-Tutorial
    :numbered:
    
-   windowspython.rst
-   linuxpython.rst
+   pythonbasic.rst
+   pythonparam.rst
+   pythonpygame.rst
+   pythonbuild.rst

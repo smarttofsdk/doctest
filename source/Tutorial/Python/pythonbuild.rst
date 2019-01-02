@@ -1,7 +1,7 @@
-Windows平台Python样例
+Python样例生成运行
 =======================
 
-Windows下运行Python样例需要安装对应Python版本的dmcam包、
+运行Python样例需要安装对应Python版本的dmcam包、
 numpy、matplotlib、pygame、Pyqtgraph等包。
 
 运行python样例相关包的安装
@@ -31,35 +31,4 @@ numpy、matplotlib、pygame、Pyqtgraph等包。
 	.. note::
 		在python2.7或者python3.4环境下安装PyQt5可能回导致失败，可以换成安装PyQt4   
 
-运行Python基本采集样例
-------------------------
-
-运行在windows/samples/python目录中的sample_basic.py采集程序::
-
-   python sampe_basic.py
-
-基本采集程序运行的结果如下图
-
-.. image:: imageP/win_P2.jpg 
-
-运行Python参数设置样例
--------------------------
-
-运行在windows/samples/python目录中的sample_param.py程序::
-
-   python sample_param.py
-
-参数设置程序运行结果如下图
-
-.. image:: imageP/win_P3.jpg 
-
-运行Python UI样例
-------------------------
-
-运行在windows/samples/python目录中的sample_gui_pygame.py程序::
-
-   python sample_gui_pygame.py
-
-程序运行结果如下图
-
-.. image:: imageP/win_P4.jpg 
+python相关包安装好后，就可以运行指定的样例。
