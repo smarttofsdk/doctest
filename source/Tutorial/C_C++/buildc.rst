@@ -1,4 +1,4 @@
-Windows下C/C++示例
+C/C++下样例的生成运行
 =====================
 
 在windows下生成vs工程
@@ -38,21 +38,6 @@ Windows下C/C++示例
 生成可执行文件后，在build文件夹下显示如下图所示的可执行文件：
 
 .. image:: imageC/win_C3.jpg
-
-运行sample_capture_frames采集样例程序如图
-
-.. image:: imageC/win_C4.jpg
-
-运行sample_set_param参数样例程序如图
-
-.. image:: imageC/win_C5.jpg
-
-
-运行sample_save_replay保存录像样例程序如图
-
-.. image:: imageC/win_C6.jpg
-
-运行录像样例会生成一个名为sample_replay.oni文件,可以通过SmartToFViewer工具进行回放。
 
 C++的样例程序的使用跟C一样，具体过程可以参考以上C的使用过程。
 

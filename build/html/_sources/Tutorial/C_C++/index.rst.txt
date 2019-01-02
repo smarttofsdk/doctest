@@ -6,5 +6,8 @@ C/C++
    :name: tof-Tutorial
    :numbered:
    
-   windowsc.rst
-   linuxc.rst
+   capture.rst
+   param_set.rst
+   filter.rst
+   replay.rst
+   buildc.rst
