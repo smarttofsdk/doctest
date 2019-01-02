@@ -6,6 +6,6 @@ Java
    :name: tof-Tutorial
    :numbered:
    
-   windowsjava.rst
-   linuxjava.rst
+   javabasic.rst
+   javabasicUi.rst
    buildjava.rst
