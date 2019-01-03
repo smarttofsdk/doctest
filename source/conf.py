@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Smarttof SDK UserGuide'
-copyright = '2018, ni'
-author = 'ni'
+copyright = '2018, smarttof'
+author = 'smarttof'
 
 # The short X.Y version
-version = '1.60'
+version = '1.61'
 # The full version, including alpha/beta/rc tags
-release = '1.60.0'
+release = '1.61.5'
 
 
 # -- General configuration ---------------------------------------------------
