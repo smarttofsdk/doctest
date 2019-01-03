@@ -1,10 +1,9 @@
-Java扩展
-===============
+Java 扩展说明
+=============
 
 .. toctree::
    :maxdepth: 1
    :name: tof-Reference
    :numbered:
    
-   windowsjava.rst
-   linuxjava.rst
+   javaex_overview.rst
