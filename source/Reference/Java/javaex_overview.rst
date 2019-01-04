@@ -6,41 +6,41 @@ dmcam 提供的Java扩展可方便基于Java的开发人员基于 SmartToF_ 相�
 Java扩展的安装
 +++++++++++++++++++++++
 
+* Window 平台
 
-Java 扩展目前支持以下系统
+  * 支持的系统： 
 
-* Windows 32bit/64bit with JDK >= 1.8
-* Linux 64bit (Ubuntu 14.04/16.04 Open JDK 7 tested)
+    - Windows 7/8/10 32bit/64bit 
+    - JDK >= 1.8
 
-Java 扩展包括以下文件:
+  * Java扩展动态库包括：
 
-Window
-######
+    - dmcam.jar: Java 扩展动态库，可导入Java 工程.
+    - dmcam_java.dll: Java dmcam的扩展适配库
+    - libdmcam.dll: dmcam core lib
 
-* Java扩展动态库包括：
+  * 安装方式
+  
+    - 将以上dll加入PATH路径或复制到执行文件目录。
+    - Java 工程中引用 `dmcam.jar`
 
-  - dmcam.jar: Java 扩展动态库，可导入Java 工程.
-  - dmcam_java.dll: Java dmcam的扩展适配库
-  - libdmcam.dll: dmcam core lib
+* Linux
 
-* 安装方式
+  * 支持的系统：
 
-  - 将以上dll加入PATH路径或复制到执行文件目录。
-  - Java 工程中引用 `dmcam.jar`
+    - Linux 64bit (Ubuntu 14.04/16.04 tested)
+    - Open JDK >= 7
 
-Linux
-#####
-
-* Java扩展动态库包括：
-
-  - dmcam.jar: Java 扩展动态库，可导入Java 工程.
-  - libdmcam_java.so: Java dmcam的扩展适配库
-  - libdmcam.so: dmcam core lib  
-
-* 安装方式
-
-  - 设置 `LD_LIBRAYR_PATH` 包含上述so/dll目录, 或将动态库放入系统库目录下，例如： `/usr/local/lib/`
-
+  * Java扩展动态库包括：
+  
+    - dmcam.jar: Java 扩展动态库，可导入Java 工程.
+    - libdmcam_java.so: Java dmcam的扩展适配库
+    - libdmcam.so: dmcam core lib  
+  
+  * 安装方式
+  
+    - 设置 `LD_LIBRAYR_PATH` 包含上述so/dll目录, 或将动态库放入系统库目录下，例如： `/usr/local/lib/`
+  
 Java API 说明
 ++++++++++++++++++++++
 
@@ -97,7 +97,7 @@ Java中的模组API和C库中 **dmcam.h** 中定义的API基本一一对应。
             dmcamDevArray devs = new dmcamDevArray(16);
             int cnt = dmcam.dev_list(devs.cast(), 16);
 
-            Console.Write("found {0} device\n", cnt);
+            System.out.printf("found {0} device\n", cnt);
     
   `dmcam.param_batch_set()`
    Java中设置参数相对C比较复杂一些, 需要构造param_item_t实例。 具体使用样例如下:
@@ -153,5 +153,4 @@ Java中的模组API和C库中 **dmcam.h** 中定义的API基本一一对应。
         dmcam.cap_config_set(dev, cfg);
 
   
-.. _`Pypi项目主页`: https://pypi.org/project/dmcam/
 .. _SmartToF: http://www.smarttof.com

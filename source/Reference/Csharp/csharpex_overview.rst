@@ -7,40 +7,41 @@ C#扩展的安装
 +++++++++++++++++++++++
 
 
-C# 扩展目前支持以下系统
+* Window
 
-* Windows 32bit/64bit with .Net framework >= 3.5 
-* Linux 64bit (Ubuntu 14.04/16.04) with Mono
+  * 支持的系统： 
 
-C# 扩展包括以下文件:
+    - Windows 7/8/10 32bit/64bit 
+    - .Net framework >= 3.5 
 
-Window
-######
+  * C#扩展动态库包括：
+  
+    - dmcam_csharp.dll: C# 扩展动态库，可导入C# 工程.
+    - dmcam_csharp_adapter.dll: C# dmcam的扩展适库配
+    - libdmcam.dll: dmcam core lib
+  
+  * 安装方式
+  
+    - 将以上dll加入PATH路径或复制到执行文件目录。
+    - C# 工程中引用 `dmcam_csharp.dll`
 
-* C#扩展动态库包括：
+* Linux
+  
+  * 支持的系统：
 
-  - dmcam_csharp.dll: C# 扩展动态库，可导入C# 工程.
-  - dmcam_csharp_adapter.dll: C# dmcam的扩展适库配
-  - libdmcam.dll: dmcam core lib
+    - Linux 64bit (Ubuntu 14.04/16.04 tested)
+    - Mono
 
-* 安装方式
-
-  - 将以上dll加入PATH路径或复制到执行文件目录。
-  - C# 工程中引用 `dmcam_csharp.dll`
-
-Linux
-#####
-
-* C#扩展动态库包括：
-
-  - dmcam_csharp.dll: C# 扩展动态库，可导入C# 工程.
-  - dmcam_csharp_adapter.so: C# dmcam的扩展适配库
-  - libdmcam.so: dmcam core lib  
-
-* 安装方式
-
-  - 设置 `LD_LIBRAYR_PATH` 包含上述so/dll目录, 或将动态库放入系统库目录下，例如： `/usr/local/lib/`
-
+  * C#扩展动态库包括：
+  
+    - dmcam_csharp.dll: C# 扩展动态库，可导入C# 工程.
+    - dmcam_csharp_adapter.so: C# dmcam的扩展适配库
+    - libdmcam.so: dmcam core lib  
+  
+  * 安装方式
+  
+    - 设置 `LD_LIBRAYR_PATH` 包含上述so/dll目录, 或将动态库放入系统库目录下，例如： `/usr/local/lib/`
+  
 C# API 说明
 ++++++++++++++++++++++
 
