@@ -3,7 +3,8 @@ Python
 
 .. toctree::
    :maxdepth: 1
-   :name: tof-Tutorial
+   :caption: 样例和运行
+   :name: tutorialpython
    :numbered:
    
    pythonbasic.rst

@@ -3,9 +3,10 @@ C/C++
 
 .. toctree::
    :maxdepth: 1
-   :name: tof-Tutorial
    :numbered:
-   
+   :caption: 样例和生成
+   :name: tutorialc
+
    capture.rst
    param_set.rst
    filter.rst
