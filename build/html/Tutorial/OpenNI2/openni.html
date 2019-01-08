@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Openni2样例使用 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
+  <title>1. Niviewer采集显示模组数据 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Android" href="../Android/index.html" />
+    <link rel="next" title="2. SmartToF Openni2采集" href="capture.html" />
     <link rel="prev" title="Openni2" href="index.html" /> 
 
   
@@ -98,12 +98,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Openni2</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Openni2样例使用</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#smarttof-niviewer">1.1. SmartToF Niviewer使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#smarttof-openni2">1.2. SmartToF Openni2采集样例运行</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">1.3. SmartToF Openni2参数样例运行</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Niviewer采集显示模组数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="capture.html">2. SmartToF Openni2采集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="param.html">3. SmartToF Openni2参数设置</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Android/index.html">Android</a></li>
@@ -165,7 +162,7 @@
         
           <li><a href="index.html">Openni2</a> &raquo;</li>
         
-      <li>1. Openni2样例使用</li>
+      <li>1. Niviewer采集显示模组数据</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,31 +181,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="openni2">
-<h1>1. Openni2样例使用<a class="headerlink" href="#openni2" title="Permalink to this headline">¶</a></h1>
-<p>SmartToF SDK目前提供支持OpenNI2的Windows平台相关驱动库，
-并且SDK提供了配套运行OpenNI2下的采集样例。</p>
-<div class="section" id="smarttof-niviewer">
-<h2>1.1. SmartToF Niviewer使用<a class="headerlink" href="#smarttof-niviewer" title="Permalink to this headline">¶</a></h2>
-<p>通过将SDK中openni2包中的libdmcam.dll、smarttof.dll、smarttof.lib、smarttof.pdb等库
-拷贝到OpenNI2安装路径下下的Tools/OpenNI2/Drivers下，如下图</p>
+  <div class="section" id="niviewer">
+<h1>1. Niviewer采集显示模组数据<a class="headerlink" href="#niviewer" title="Permalink to this headline">¶</a></h1>
+<p>SmartToF SDK目前提供了支持OpenNI2的Windows平台相关驱动库，
+通过将SDK中openni2包中的libdmcam.dll、smarttof.dll、smarttof.lib、smarttof.pdb等库
+拷贝到OpenNI2安装路径下的Tools/OpenNI2/Drivers下，如下图</p>
 <img alt="../../_images/win_N1.jpg" src="../../_images/win_N1.jpg" />
 <p>转到Tools目录，管理员运行Tools下NiViewer.exe程序，显示结果如下图</p>
 <img alt="../../_images/win_N2.jpg" src="../../_images/win_N2.jpg" />
 <img alt="../../_images/win_N3.png" src="../../_images/win_N3.png" />
-</div>
-<div class="section" id="smarttof-openni2">
-<h2>1.2. SmartToF Openni2采集样例运行<a class="headerlink" href="#smarttof-openni2" title="Permalink to this headline">¶</a></h2>
-<p>进入SDK中的openni2目录下的Smarttof_OpenNI_Sample/Smarttof_OpenNI_Sample,打开VS工程如下图</p>
-<img alt="../../_images/win_N4.jpg" src="../../_images/win_N4.jpg" />
-<p>编译生成main.cpp,生成后运行结果如下图</p>
-<img alt="../../_images/win_N5.jpg" src="../../_images/win_N5.jpg" />
-</div>
-<div class="section" id="id1">
-<h2>1.3. SmartToF Openni2参数样例运行<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>将Openni2采集样例中改为sample_set_param.cpp加入编译，编译生成后运行结果如下图</p>
-<img alt="../../_images/win_N6.jpg" src="../../_images/win_N6.jpg" />
-</div>
 </div>
 
 
@@ -219,7 +200,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Android/index.html" class="btn btn-neutral float-right" title="Android" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="capture.html" class="btn btn-neutral float-right" title="2. SmartToF Openni2采集" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Openni2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

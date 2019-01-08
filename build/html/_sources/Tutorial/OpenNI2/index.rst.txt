@@ -7,3 +7,5 @@ Openni2
    :numbered:
    
    openni.rst
+   capture.rst
+   param.rst
