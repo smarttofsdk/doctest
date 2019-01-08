@@ -1,4 +1,4 @@
-C#基本采集样例
+最简采集
 ===================
 
 SDK中提供了sampleBasic和sampleBasicUi两个基本展示样例，

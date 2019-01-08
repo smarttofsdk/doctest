@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. ROS基本样例" href="linuxros.html" />
-    <link rel="prev" title="3. Java样例生成运行" href="../Java/buildjava.html" /> 
+    <link rel="next" title="1. ROS深度显示" href="linuxros.html" />
+    <link rel="prev" title="3. 编译生成" href="../Java/buildjava.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -97,8 +97,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ROS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linuxros.html">1. ROS基本样例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rosrviz.html">2. ROS rviz工具使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linuxros.html">1. ROS深度显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rosgray.html">2. ROS灰度显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="roscloud.html">3. ROS点云显示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rosbuild.html">4. ROS下使用模组环境搭建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rosrviz.html">5. ROS rviz工具使用</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../OpenNI2/index.html">Openni2</a></li>
@@ -180,10 +183,17 @@
             
   <div class="section" id="ros">
 <h1>ROS<a class="headerlink" href="#ros" title="Permalink to this headline">¶</a></h1>
+<p>ROS包中主要包括了ros系统对smarttof API的封装，
+分为dmcam_ros和cloud_viewer两个包，dmcam_ros包
+用来采集与显示深度、灰度数据和动态修改参数，cloud_viewer用来
+显示点云数据。</p>
 <div class="toctree-wrapper compound" id="tof-tutorial">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="linuxros.html">1. ROS基本样例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rosrviz.html">2. ROS rviz工具使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxros.html">1. ROS深度显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rosgray.html">2. ROS灰度显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roscloud.html">3. ROS点云显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rosbuild.html">4. ROS下使用模组环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rosrviz.html">5. ROS rviz工具使用</a></li>
 </ul>
 </div>
 </div>
@@ -196,10 +206,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="linuxros.html" class="btn btn-neutral float-right" title="1. ROS基本样例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="linuxros.html" class="btn btn-neutral float-right" title="1. ROS深度显示" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../Java/buildjava.html" class="btn btn-neutral" title="3. Java样例生成运行" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Java/buildjava.html" class="btn btn-neutral" title="3. 编译生成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

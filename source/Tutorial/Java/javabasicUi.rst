@@ -1,4 +1,4 @@
-Java basicUi样例
+采集UI显示
 ======================
 
 Java basicUi采集显示样例展示了在使用Java时调用SDK中的采集接口

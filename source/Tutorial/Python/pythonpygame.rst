@@ -1,4 +1,4 @@
-python采集显示样例
+采集UI显示
 =======================
 
 SDK中提供了在python下使用pygame等模块进行采集图像的显示，如sample_gui_pygame.py.

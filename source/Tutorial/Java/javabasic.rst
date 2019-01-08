@@ -1,4 +1,4 @@
-Java basic样例
+最简采集
 ======================
 
 SDK中提供了Java的basic和basicUi两个基本展示样例，

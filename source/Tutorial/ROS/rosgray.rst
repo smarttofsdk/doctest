@@ -1,4 +1,4 @@
-ROS深度显示
+ROS灰度显示
 =======================
 
 #. 开启ROS环境::
@@ -13,10 +13,10 @@ ROS深度显示
 
 	roslaunch dmcam_ros start.launch
 	
-#. 显示深度图命令::
+#. 显示灰度图命令::
 
-	rosrun image_view image_view image:=/smarttof/image_dist
+	rosrun image_view image_view image:=/smarttof/image_gray
 
-   深度图像显示如下：
+   灰度图像显示如下：
 
-   .. image:: imageR/lin_R2.jpg 
+   .. image:: imageR/lin_R3.jpg 
