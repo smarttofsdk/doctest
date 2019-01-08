@@ -3,7 +3,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :name: tof-Reference
+   :name: referencetool
    :numbered:
    
    viewer.rst
