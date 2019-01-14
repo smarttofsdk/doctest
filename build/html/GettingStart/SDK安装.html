@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. 平台安装 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
+  <title>2. 模组连接 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. 工具初步使用" href="工具使用.html" />
-    <link rel="prev" title="快速入门" href="index.html" /> 
+    <link rel="next" title="3. 工具初步使用" href="工具使用.html" />
+    <link rel="prev" title="1. SmartToF SDK 配置需求" href="配置说明.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,21 +89,21 @@
 <p class="caption"><span class="caption-text">开始(GettingStart)</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">快速入门</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. 平台安装</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#windows">1.1. windows下安装</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">1.1.1. 推荐系统配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">1.1.2. 模组准备</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">1.1.3. 模组安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="配置说明.html">1. SmartToF SDK 配置需求</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. 模组连接</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">2.1. windows下模组连接</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1.1. 模组准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.1.2. 模组安装</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#linux">1.2. linux下安装</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#libusb">1.2.1. libusb的安装</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">1.2.2. libusb权限修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">2.2. linux下模组连接</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#libusb">2.2.1. libusb的安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.2.2. libusb权限修改</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="工具使用.html">2. 工具初步使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="工具使用.html">3. 工具初步使用</a></li>
 </ul>
 </li>
 </ul>
@@ -174,7 +174,7 @@
         
           <li><a href="index.html">快速入门</a> &raquo;</li>
         
-      <li>1. 平台安装</li>
+      <li>2. 模组连接</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -194,39 +194,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>1. 平台安装<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>2. 模组连接<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="windows">
-<h2>1.1. windows下安装<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. windows下模组连接<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <p>在windows下连接使用模组时，需要安装模组的usb驱动，模组的一般安装流程如下：</p>
 <div class="section" id="id2">
-<h3>1.1.1. 推荐系统配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="18%" />
-<col width="82%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">配置项</th>
-<th class="head">推荐配置</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td rowspan="2">操作系统</td>
-<td>Windows: Win7 32/64位 Win10 32/64位</td>
-</tr>
-<tr class="row-odd"><td>Linux: Ubuntu14.04 64位 Ubuntu16.04 64位</td>
-</tr>
-<tr class="row-even"><td>内存</td>
-<td>4G及以上</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="id3">
-<h3>1.1.2. 模组准备<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1. 模组准备<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>模组套件包括TC系列模组、MicroUSB线和电源（部分型号无需电源）如表2所示</p>
-<table border="1" class="colwidths-given docutils" id="id6">
-<caption><span class="caption-text">表2 模组套件</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id5">
+<caption><span class="caption-text">表2 模组套件</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="23%" />
 <col width="31%" />
@@ -251,8 +227,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id4">
-<h3>1.1.3. 模组安装<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>2.1.2. 模组安装<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>在windows系统下，运行SDK中windows/drivers目录下的smarttof_usb_install.exe程序进行驱动的安装，正常安装过程如下图所示</p>
 <img alt="../_images/win_G4.jpg" src="../_images/win_G4.jpg" />
 <p>驱动正常安装后，将USB电缆连接模组和PC,打开设备管理器中可以看到模组的设备名，如下图所示</p>
@@ -260,9 +236,9 @@
 </div>
 </div>
 <div class="section" id="linux">
-<h2>1.2. linux下安装<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. linux下模组连接<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="libusb">
-<h3>1.2.1. libusb的安装<a class="headerlink" href="#libusb" title="Permalink to this headline">¶</a></h3>
+<h3>2.2.1. libusb的安装<a class="headerlink" href="#libusb" title="Permalink to this headline">¶</a></h3>
 <p>在使用Linux的发行版ubuntu14和ubuntu16时，默认自带libusb，无需安装usb驱动，如果需要重装libusb,
 删除原来的libusb后，在终端中重新输入命令进行安装:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="n">dev</span>
@@ -272,8 +248,8 @@
 所示显示设备号</p>
 <img alt="../_images/win_G6.jpg" src="../_images/win_G6.jpg" />
 </div>
-<div class="section" id="id5">
-<h3>1.2.2. libusb权限修改<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>2.2.2. libusb权限修改<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>为了便于每次使用模组时，不用重复输入密码，需要给usb增加相应的规则，SDK中已经提供规则设置脚本，
 只要运行在linux/lib目录下的setup.sh脚本，运行脚本过程如下图</p>
 <img alt="../_images/win_G7.jpg" src="../_images/win_G7.jpg" />
@@ -289,10 +265,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="工具使用.html" class="btn btn-neutral float-right" title="2. 工具初步使用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="工具使用.html" class="btn btn-neutral float-right" title="3. 工具初步使用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="快速入门" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="配置说明.html" class="btn btn-neutral" title="1. SmartToF SDK 配置需求" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

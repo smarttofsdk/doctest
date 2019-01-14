@@ -1,4 +1,4 @@
-SmartToF Openni2采集
+最简采集
 ==========================
 
 SmartToF SDK还提供了使用OpenNI的基础的采集和参数设置样例：

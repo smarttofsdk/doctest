@@ -1,4 +1,4 @@
-Niviewer采集显示模组数据
+Niviewer采集显示
 ===========================
 
 SmartToF SDK目前提供了支持OpenNI2的Windows平台相关驱动库，

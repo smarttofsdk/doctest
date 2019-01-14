@@ -1,0 +1,91 @@
+SmartToF SDK 配置需求
+========================
+
+最低配置
+++++++++++++++++++++++++++++
+
+.. list-table:: x86或x64平台最低配置
+	:widths: auto
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - CPU
+	  - Intel Atom X5-8350
+	* - 内存
+	  - 2GB
+	* - 接口
+	  - USB2.0
+	  
+.. list-table:: ARM平台最低配置
+	:widths: auto
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - CPU
+	  - Cortex-A7
+	* - 内存
+	  - 256M DDR3 RAM
+	* - 接口
+	  - USB2.0
+	  
+推荐配置
+++++++++++++++++++++++++++++
+
+.. list-table:: x86或x64平台推荐配置
+	:widths: 30 60
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - CPU
+	  - Intel Core i5
+	* - 内存
+	  - 4GB
+	* - 接口
+	  - USB2.0
+	  
+.. list-table:: ARM平台推荐配置
+	:widths: 30 60
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - CPU
+	  - Cortex-A53
+	* - 内存
+	  - 512M DDR3 RAM
+	* - 接口
+	  - USB2.0
+	  
+SmartToF SDK运行要求
+++++++++++++++++++++++++++++++++++
+
+.. list-table:: Windows下
+	:widths: 30 60
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - 数据接口
+	  - USB2.0
+	* - 操作系统
+	  - Windows 7 / 10(32位和64位)
+	* - 编译器
+	  - Visual Studio 2013或以上
+	* - 编程语言
+	  - C/C++,C#,Java,Python
+	  
+.. list-table:: Linux下
+	:widths: 30 60
+	:header-rows: 0
+	:stub-columns: 0
+	
+	* - 数据接口
+	  - USB2.0	
+	* - 操作系统
+	  - Ubuntu 14.04 / 18.04(64位)
+	* - 编译器
+	  - GCC 4.8或者更高
+	* - 编程语言
+	  - C/C++,C#,Java,Python
+	
+	
+
+
