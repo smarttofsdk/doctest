@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Android扩展介绍 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
+  <title>1. dmcam Android扩展概述 &mdash; Smarttof SDK UserGuide 1.61.5 documentation</title>
   
 
   
@@ -108,7 +108,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../Csharp/index.html">C#扩展说明</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Java/index.html">Java 扩展说明</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Android扩展说明</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Android扩展介绍</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. dmcam Android扩展概述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#android">1.1. Android扩展的安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#android-api">1.2. Android API 说明</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ROS/index.html">ROS扩展</a></li>
@@ -160,7 +164,7 @@
         
           <li><a href="index.html">Android扩展说明</a> &raquo;</li>
         
-      <li>1. Android扩展介绍</li>
+      <li>1. dmcam Android扩展概述</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,9 +183,153 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="android">
-<h1>1. Android扩展介绍<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h1>
-<p>Android 详细内容说明</p>
+  <div class="section" id="dmcam-android">
+<h1>1. dmcam Android扩展概述<a class="headerlink" href="#dmcam-android" title="Permalink to this headline">¶</a></h1>
+<p>dmcam 提供的Android扩展可方便Android开发人员基于 <a class="reference external" href="http://www.smarttof.com">SmartToF</a> 相机进行快速的二次开发,本文档主要描述Android扩展的使用以及API和C的关联和区别。</p>
+<div class="section" id="android">
+<h2>1.1. Android扩展的安装<a class="headerlink" href="#android" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>支持的系统：<ul>
+<li>Android 4.4.2</li>
+</ul>
+</li>
+<li>Android扩展动态库包括(ARM V5和ARM V7架构)<ul>
+<li>libdmcam.so: dmcam core lib</li>
+<li>libdmcam_java.so: Java dmcam的扩展适配库</li>
+<li>dmcam_android.jar: android 扩展动态库，可导入Android 工程</li>
+<li>libusb1.0.so: usb设备驱动库</li>
+</ul>
+</li>
+<li>安装方式<ul>
+<li>将以上的所有so库加入到Android工程下的libs</li>
+<li>Android工程下再加入 <cite>dmcam.jar</cite></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="android-api">
+<h2>1.2. Android API 说明<a class="headerlink" href="#android-api" title="Permalink to this headline">¶</a></h2>
+<p>Android的app开发是基于Java语言的，所以Android中的主要API说明和Java中的
+API说明基本一致，都和C库中的 <strong>dmcam.h</strong> 中定义的API基本一一对应。</p>
+<ul>
+<li><p class="first">Android中扩展的默认名字空间为: <cite>com.smarttof.dmcam</cite> 。 可通过 <cite>import</cite> 方式导入：</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.smarttof.dmcam.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">devSetFrameRate</span><span class="o">(</span><span class="n">dev_t</span> <span class="n">dev</span><span class="o">,</span> <span class="kt">int</span> <span class="n">fps</span><span class="o">){</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">dev</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+
+        <span class="n">param_item_t</span> <span class="n">wparam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">param_item_t</span><span class="o">();</span>
+        <span class="n">dmcamParamArray</span> <span class="n">wparams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">dmcamParamArray</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+
+        <span class="n">wparam</span><span class="o">.</span><span class="na">setParam_id</span><span class="o">(</span><span class="n">dev_param_e</span><span class="o">.</span><span class="na">PARAM_FRAME_RATE</span><span class="o">);</span>
+        <span class="n">wparam</span><span class="o">.</span><span class="na">getParam_val</span><span class="o">().</span><span class="na">getFrame_rate</span><span class="o">().</span><span class="na">setFps</span><span class="o">(</span><span class="n">fps</span><span class="o">);</span>
+
+        <span class="n">wparams</span><span class="o">.</span><span class="na">setitem</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">wparam</span><span class="o">);</span>
+        <span class="n">logUI</span><span class="o">(</span><span class="s">&quot;DMCAM&quot;</span><span class="o">,</span>
+                        <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;set fps = %d\n&quot;</span><span class="o">,</span> <span class="n">wparams</span><span class="o">.</span><span class="na">getitem</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+                                        <span class="o">.</span><span class="na">getParam_val</span><span class="o">().</span><span class="na">getFrame_rate</span><span class="o">().</span><span class="na">getFps</span><span class="o">()));</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">dmcam</span><span class="o">.</span><span class="na">param_batch_set</span><span class="o">(</span><span class="n">dev</span><span class="o">,</span> <span class="n">wparams</span><span class="o">.</span><span class="na">cast</span><span class="o">(),</span> <span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">logUI</span><span class="o">(</span><span class="s">&quot;DMCAM&quot;</span><span class="o">,</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot; set fps to %d failed\n&quot;</span><span class="o">,</span> <span class="n">fps</span><span class="o">));</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Android中的调用的API和Java中调用的API基本相同，映射关系都如: <strong>dmcam_xxxxx(…) -&gt; dmcam.xxxxx(…)</strong> 。
+例如 <cite>dmcam_dev_close</cite> 被映射为 <cite>dmcam.dev_close</cite></p>
+</li>
+<li><p class="first">结构体映射关系： <strong>dmcam_xxxxx -&gt; xxxxx()</strong> 。结构体被映射为java中的一个类。例如通过如下方式创建一个 <cite>dmcam_param_item_t</cite> 结构体:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">wparam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">param_item_t</span><span class="o">();</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">在Android中打开设备时调用的API为 <cite>dmcam.dev_open_by_fd</cite>,不是其他环境下的 <cite>dmcam.dev_open</cite></p>
+</div>
+</li>
+<li><p class="first">访问结构体的成员变量： <strong>obj.field -&gt; obj.getField()/setField</strong> 。 成员变量的访问需通过成员变量名对应的 <cite>get/set</cite> 方法进行。例如：</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">cap_cfg_t</span> <span class="n">cfg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">cap_cfg_t</span><span class="o">();</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setCache_frames_cnt</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>  <span class="c1">// cfg.cache_frame_cnt = 10</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setOn_error</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>        <span class="c1">// cfg.on_error = NULL</span>
+<span class="cm">/* ... */</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><cite>NULL</cite> 被映射为 <cite>null</cite> 。例如:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="na">setOn_error</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">以下是在Android中调用API与C中的一些区别，需要注意。</p>
+<dl class="docutils">
+<dt><cite>dmcam.dev_open_by_fd()</cite></dt>
+<dd><blockquote class="first">
+<div><p>在Android下打开设备，需要调用专为Android设计的API dmcam.dev_open_by_fd(),具体使用样例如下：</p>
+</div></blockquote>
+<div class="last highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">UsbDeviceConnection</span> <span class="n">connection</span> <span class="o">=</span> <span class="n">usbManager</span><span class="o">.</span><span class="na">openDevice</span><span class="o">(</span><span class="n">usbDevice</span><span class="o">);</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="na">getFileDescriptor</span><span class="o">();</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">dmcam</span><span class="o">.</span><span class="na">dev_open_by_fd</span><span class="o">(</span><span class="n">fd</span><span class="o">);</span>
+</pre></div>
+</div>
+</dd>
+<dt><cite>dmcam.param_batch_set()</cite></dt>
+<dd><blockquote class="first">
+<div><p>需要构造param_item_t实例，具体样例如下:</p>
+</div></blockquote>
+<div class="last highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">param_item_t</span> <span class="n">wparam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">param_item_t</span><span class="o">();</span>
+    <span class="n">dmcamParamArray</span> <span class="n">wparams</span> <span class="o">=</span> <span class="k">new</span> <span class="n">dmcamParamArray</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+
+    <span class="n">wparam</span><span class="o">.</span><span class="na">setParam_id</span><span class="o">(</span><span class="n">dev_param_e</span><span class="o">.</span><span class="na">PARAM_INTG_TIME</span><span class="o">);</span>
+    <span class="n">wparam</span><span class="o">.</span><span class="na">getParam_val</span><span class="o">().</span><span class="na">getIntg</span><span class="o">().</span><span class="na">setIntg_us</span><span class="o">(</span><span class="n">expoUs</span><span class="o">);</span>
+
+    <span class="n">wparams</span><span class="o">.</span><span class="na">setitem</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">wparam</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">dmcam</span><span class="o">.</span><span class="na">param_batch_set</span><span class="o">(</span><span class="n">dev</span><span class="o">,</span> <span class="n">wparams</span><span class="o">.</span><span class="na">cast</span><span class="o">(),</span> <span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
+                  <span class="n">logUI</span><span class="o">(</span><span class="s">&quot;DMCAM&quot;</span><span class="o">,</span>
+                                  <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot; set exposure to %d us failed\n&quot;</span><span class="o">,</span> <span class="n">expoUs</span><span class="o">));</span>
+                  <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><cite>dmcam.param_batch_get()</cite></dt>
+<dd><blockquote class="first">
+<div><p>获取参数也要构造实例，具体样例如下:</p>
+</div></blockquote>
+<div class="last highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">param_item_t</span> <span class="n">r_fps</span> <span class="o">=</span> <span class="k">new</span> <span class="n">param_item_t</span><span class="o">();</span>
+<span class="n">r_fps</span><span class="o">.</span><span class="na">setParam_id</span><span class="o">(</span><span class="n">dev_param_e</span><span class="o">.</span><span class="na">PARAM_FRAME_RATE</span><span class="o">);</span>
+
+<span class="n">dmcamParamArray</span> <span class="n">rparam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">dmcamParamArray</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="n">rparam</span><span class="o">.</span><span class="na">setitem</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="n">r_fps</span><span class="o">);</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">dmcam</span><span class="o">.</span><span class="na">param_batch_get</span><span class="o">(</span><span class="n">dev</span><span class="o">,</span> <span class="n">rparam</span><span class="o">.</span><span class="na">cast</span><span class="o">(),</span> <span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">logUI</span><span class="o">(</span><span class="s">&quot;DMCAM&quot;</span><span class="o">,</span>
+                      <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot; get frame_rate %d fps\n&quot;</span><span class="o">,</span>  <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">rparam</span><span class="o">.</span><span class="na">getitem</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getParam_val</span><span class="o">().</span><span class="na">getFrame_rate</span><span class="o">().</span><span class="na">getFps</span><span class="o">()));</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><cite>dmcam.set_callback_on_frame_ready 和 dmcam.set_callback_on_error</cite></dt>
+<dd><p class="first">Android扩展中不支持回调函数。采集时，可以参考如下设置：</p>
+<div class="last highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">cap_cfg_t</span> <span class="n">cfg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">cap_cfg_t</span><span class="o">();</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setCache_frames_cnt</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setOn_error</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setOn_frame_ready</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setEn_save_replay</span><span class="o">((</span><span class="kt">short</span><span class="o">)</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setEn_save_dist_u16</span><span class="o">((</span><span class="kt">short</span><span class="o">)</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setEn_save_gray_u16</span><span class="o">((</span><span class="kt">short</span><span class="o">)</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">cfg</span><span class="o">.</span><span class="na">setFname_replay</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+
+<span class="n">dmcam</span><span class="o">.</span><span class="na">cap_config_set</span><span class="o">(</span><span class="n">dev</span><span class="o">,</span> <span class="n">cfg</span><span class="o">);</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 </div>
 
 

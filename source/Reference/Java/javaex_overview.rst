@@ -117,7 +117,7 @@ Java中的模组API和C库中 **dmcam.h** 中定义的API基本一一对应。
       }
 
   `dmcam.param_batch_get(dev, list)`
-    Java中设置参数相对C比较复杂一些, 需要构造param_item_t实例。 具体使用样例如下:
+    Java中获取参数相对C比较复杂一些, 需要构造param_item_t实例。 具体使用样例如下:
 
     .. code-block:: Java
 
