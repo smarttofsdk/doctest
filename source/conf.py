@@ -22,7 +22,7 @@ read_the_docs_build = os.environ.get('READTHEDOC',None) == 'True'
 
 if read_the_docs_build:
 
-    subprocess.call('cd ../doxygen; doxygen', shell=True)
+    subprocess.call('cd ./Reference/C_C++; doxygen', shell=True)
 
 
 # -- Project information -----------------------------------------------------
