@@ -4,14 +4,14 @@
     <compoundname>dmcam.h</compoundname>
     <includes local="no">stdint.h</includes>
     <incdepgraph>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
       <node id="3">
         <label>dmcam.h</label>
         <link refid="dmcam.h"/>
         <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>stdint.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="func">

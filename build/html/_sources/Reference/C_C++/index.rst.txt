@@ -6,6 +6,6 @@ C/C++核心库(libdmcam)参考
    :name: tof-Reference
    :numbered:
    
+   myapi.rst
    主要数据类型说明.rst
-   主要API接口说明.rst
    配套代码说明.rst
