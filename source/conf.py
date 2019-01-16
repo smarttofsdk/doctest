@@ -48,7 +48,14 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'breathe',
 ]
+
+#extensions = [ 'breathe' ]
+
+breathe_projects = { "myproject": "./Reference/C_C++/xml"}
+breathe_default_project = "myproject"
+breathe_domain_by_extension = {"h" : "c"}
 
 # ------------Add for md use---------------
 # -----pip install recommonmark-------------
