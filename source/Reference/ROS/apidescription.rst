@@ -62,7 +62,7 @@ dmcam_ros发布的服务
 #. \/smarttof\/change_mod_freq
 
     +---------+----------------------------------------------------------------------+
-    |使用命令 |  rosservice call /smarttof/ change_mod_freq "mod_freq_value:<value>"|
+    |使用命令 |  rosservice call /smarttof/ change_mod_freq "mod_freq_value:<value>" |
     +=========+======================================================================+
     |功能描述 |  动态修改PARAM_MOD_FREQ的值，PARAM_MOD_FREQ为时钟频率                |
     +---------+----------------------------------------------------------------------+
@@ -72,7 +72,7 @@ dmcam_ros发布的服务
 #. \/smarttof\/change_frame_rate
 
     +---------+--------------------------------------------------------------------------+
-    |使用命令 |  rosservice call /smarttof/ change_frame_rate "frame_rate_value:<value>"|
+    |使用命令 |  rosservice call /smarttof/ change_frame_rate "frame_rate_value:<value>" |
     +=========+==========================================================================+
     |功能描述 |  动态修改PARAM_FRAME_RATE的值，PARAM_FRAME_RATE为帧率                    |
     +---------+--------------------------------------------------------------------------+
