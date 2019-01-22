@@ -1,10 +1,10 @@
-ROS API 使用
+ROS 滤波
 =======================
 
-API使用
+滤波功能的使用
 +++++++++++++++++++
 
-#. 开启一个滤波功能，如DMCAM_FILTER_ID_AUTO_INTG::
+#. 打开一个滤波功能，如DMCAM_FILTER_ID_AUTO_INTG::
 
 	rosservice call /smarttof/change_filter "filter_id:
 	'DMCAM_FILTER_ID_AUTO_INTG'
@@ -14,6 +14,8 @@ API使用
 
 	rosservice call /smarttof/disable_filter "filter_id:
 	'DMCAM_FILTER_ID_AUTO_INTG'"
+	
+详细的ROS API介绍请前往ROS扩展
 
 
 
