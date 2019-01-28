@@ -16,3 +16,4 @@ ROS包中主要包括了ros系统对smarttof API的封装，
    roscloud.rst
    rosbuild.rst
    rosrviz.rst   
+   apiuse.rst
