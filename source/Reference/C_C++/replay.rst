@@ -34,7 +34,7 @@ API的介绍。
 
 - 兼容OpenNI工具的回放(如NiViewer)
  
-  支持OpenNI工具的回放，如NiViewer的播放，这时需要将 ``en_save_replay`` 设置 ``false``, ``en_save_dist_16`` 和 `` en_save_gray_u16``都
+  支持OpenNI工具的回放，如NiViewer的播放，这时需要将 ``en_save_replay`` 设置 ``false``, ``en_save_dist_u16`` 和 ``en_save_gray_u16`` 都
   设置为 ``true`` 或者任意一个设置 ``true``,如果都设置为使能，则表示存储深度图和灰度图，其中一个使能则使能 ``en_save_dist_u16`` 为深度图，
   使能 ``en_save_gray_u16`` 则表示保存的为灰度图。
 
