@@ -31,6 +31,8 @@ SmartToFViewer采集显示
 拖动或者点击界面上的相关按钮，可以对模组的采集参数设置和滤波功能使能，具体参考详细
 说明中的SmartToFViewer的详细说明。
 
+.. _doc-Replay:
+
 SmartToFViewer录像功能
 ------------------------
 SmartToFViewer支持录像功能，录制的视频文件可以作为离线算法评估的图像数据。Viewer打开
