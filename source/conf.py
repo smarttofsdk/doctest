@@ -32,9 +32,9 @@ copyright = '2018, smarttof'
 author = 'smarttof'
 
 # The short X.Y version
-version = '1.61'
+version = '1.62'
 # The full version, including alpha/beta/rc tags
-release = '1.61.5'
+release = '1.62.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -148,10 +148,11 @@ htmlhelp_basename = 'smarttofdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
+latex_engine = 'xelatex'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+    # 'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
@@ -159,11 +160,32 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+	'preamble': r'''\usepackage{ctex}
+					\usepackage{caption}
+					\usepackage{subcaption}
+					\setcounter{tocdepth}{2}
+					\setcounter{secnumdepth}{2}
+	''',
+    # 'preamble': '''
+		# \usepackage{xeCJK}
+		# \usepackage{indentfirst}
+		# \setlength{\\parindent}{2em}
+		# \setCJKmainfont{UKai}	#
+		# \setCJKmonofont[Scale=0.9]{UKai}
+		# \setCJKfamilyfont{song}{UKai}
+		# \XeTeXlinebreakskip = 0pt plus 1pt
+		# \setcounter{tocdepth}{2} #
+	  # \setcounter{secnumdepth}{0}
+	# ''',
+	# 'classoptions': ',oneside'
+	'fncychap': ' ',
+	
 
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+	
+	# 'printindex': r'\footnotesize\raggedright\printindex'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -171,7 +193,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'smarttof.tex', 'smarttof Documentation',
-     'ni', 'manual'),
+     'smarttof', 'manual'),
 ]
 
 
