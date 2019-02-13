@@ -32,9 +32,9 @@ copyright = '2018, smarttof'
 author = 'smarttof'
 
 # The short X.Y version
-version = '1.61'
+version = '1.62'
 # The full version, including alpha/beta/rc tags
-release = '1.61.5'
+release = '1.62.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -56,7 +56,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'breathe',
+    'breathe'
 ]
 
 #extensions = [ 'breathe' ]
@@ -170,8 +170,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'smarttof.tex', 'smarttof Documentation',
-     'ni', 'manual'),
+    (master_doc, 'smarttof.tex', 'SmartToF Documentation',
+     'Data Miracle', 'manual'),
 ]
 
 
@@ -180,7 +180,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'smarttof', 'smarttof Documentation',
+    (master_doc, 'smarttof', 'SmartToF Documentation',
      [author], 1)
 ]
 
@@ -226,3 +226,25 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+latex_engine = 'xelatex'
+latex_elements = {
+        # The paper size ('letterpaper' or 'a4paper').
+        #
+        # 'papersize': 'letterpaper',
+
+        # The font size ('10pt', '11pt' or '12pt').
+        #
+        # 'pointsize': '10pt',
+
+        'fncychap' : '',
+
+        # Additional stuff for the LaTeX preamble.
+        #
+        'preamble': r'''\usepackage{ctex}
+        ''',
+
+        # Latex figure (float) alignment
+        #
+        # 'figure_align': 'htbp',
+}
