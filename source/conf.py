@@ -92,6 +92,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
+#language = 'zh_CN'
 language = None
 
 # List of patterns, relative to source directory, that match files and
@@ -152,7 +153,7 @@ latex_engine = 'xelatex'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'a4paper',
+    'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
@@ -160,27 +161,46 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    'preamble': r'''\usepackage{ctex}
+    'classoptions': ',english',
+    'inputenc': '',
+    'utf8extra': '',
+
+    # Additional stuff for the LaTeX preamble.
+    # 'preamble': '''
+    # \usepackage{xeCJK}
+    # \usepackage{indentfirst}
+    # \setlength{\parindent}{2em}
+    # \setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}
+    # \setCJKmonofont[Scale=0.9]{NSimSun}
+    # \setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}
+    # \setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
+    # ''',
+
+    'preamble': r'''
+    \usepackage[nocap]{ctex}
     \usepackage{caption}
     \usepackage{subcaption}
     \setcounter{tocdepth}{2}
     \setcounter{secnumdepth}{2}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \titleformat{\chapter}{\centering\Huge\bfseries}{第\,\thechapter\,章}{1em}{}
+    \addto\captionsenglish{
+      \renewcommand{\contentsname}{目录}
+      \renewcommand{\listfigurename}{插图目录}
+      \renewcommand{\listtablename}{表格目录}
+      \renewcommand{\refname}{参考文献}
+      \renewcommand{\abstractname}{摘要}
+      \renewcommand{\indexname}{索引}
+      \renewcommand{\tablename}{表}
+      \renewcommand{\figurename}{图}
+    }
     ''',
-    # 'preamble': '''
-    # \usepackage{xeCJK}
-    # \usepackage{indentfirst}
-    # \setlength{\\parindent}{2em}
-    # \setCJKmainfont{UKai}	#
-    # \setCJKmonofont[Scale=0.9]{UKai}
-    # \setCJKfamilyfont{song}{UKai}
-    # \XeTeXlinebreakskip = 0pt plus 1pt
-    # \setcounter{tocdepth}{2} #
-    # \setcounter{secnumdepth}{0}
-    # ''',
     # 'classoptions': ',oneside'
-    'fncychap': ' ',
-
-
+    'fncychap' : '',
+    # 'fncychap': r'''
+    # \usepackage[Sonny]{fncychap}
+    # '''
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
@@ -192,7 +212,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'smarttof.tex', 'SmartToF Documentation',
+    (master_doc, 'smarttof.tex', 'SmartToF SDK User Guide',
      'Data Miracle', 'manual'),
 ]
 
@@ -202,7 +222,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'smarttof', 'SmartToF Documentation',
+    (master_doc, 'smarttof', 'SmartToF SDK User Guide',
      [author], 1)
 ]
 
@@ -249,24 +269,3 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-latex_engine = 'xelatex'
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    'fncychap' : '',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    'preamble': r'''\usepackage{ctex}
-    ''',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
