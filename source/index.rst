@@ -6,43 +6,43 @@
 Welcome to SmartToF SDK User Guide!
 ====================================
 
-.. toctree::
-   :maxdepth: 3
-   :caption: SmartToF SDK User Guide
+
+.. raw:: latex
+
+   \part{SDK简介}
 
 .. _sec-general:
 
-介绍(Introduction)
-------------------
-
 .. toctree::
-   :caption: 介绍(Introduction)
-   :titlesonly:
+   :caption: 简介(Introduction)
+
 
    Introduction/概述.rst
    Introduction/基本开发流程.rst
    
-.. _sec-start:
 
-快速入门(Quick Start)
----------------------
+.. raw:: latex
+
+   \part{快速入门(Quick Start)}
+
+.. _sec-start:
 
 .. toctree::
    :caption: 快速入门(Quick Start)
-   :titlesonly:
 
    GettingStart/配置说明.rst
    GettingStart/SDK安装.rst
    GettingStart/工具使用.rst  
 
-.. _sec-tutorial:
 
-教程(Tutorial)
----------------------
+.. raw:: latex
+
+   \part{教程(Tutorial)}
+
+.. _sec-tutorial:
 
 .. toctree::
    :caption: 教程(Tutorial)
-   :titlesonly:
 
 
    Tutorial/C_C++/index.rst
@@ -53,14 +53,15 @@ Welcome to SmartToF SDK User Guide!
    Tutorial/OpenNI2/index.rst
    Tutorial/Android/index.rst
    
-.. _sec-reference:
 
-详细参考(Reference)
----------------------
+.. raw:: latex
+
+   \part{详细参考(Reference)}
+
+.. _sec-reference:
 
 .. toctree::
    :caption: 详细参考(Reference)
-   :titlesonly:
 
    Reference/tools/index.rst
    Reference/C_C++/index.rst
@@ -75,8 +76,10 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`   
+
+.. :ref:`search`   
+.. :ref:`modindex`
+
 
 
 

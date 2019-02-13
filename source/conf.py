@@ -120,9 +120,14 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 #
 html_theme_options = {
     'logo_only': True,
-    'collapse_navigation': False,
-}
 
+    # Toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
 html_logo = '../images/smarttoflogo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
