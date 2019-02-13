@@ -118,8 +118,8 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # documentation.
 #
 html_theme_options = {
-	'logo_only': True,
-	'collapse_navigation': False,
+    'logo_only': True,
+    'collapse_navigation': False,
 }
 
 html_logo = '../images/smarttoflogo.png'
@@ -148,10 +148,11 @@ htmlhelp_basename = 'smarttofdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
+latex_engine = 'xelatex'
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
-    # 'papersize': 'letterpaper',
+    # 'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
     #
@@ -159,11 +160,32 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    'preamble': r'''\usepackage{ctex}
+    \usepackage{caption}
+    \usepackage{subcaption}
+    \setcounter{tocdepth}{2}
+    \setcounter{secnumdepth}{2}
+    ''',
+    # 'preamble': '''
+    # \usepackage{xeCJK}
+    # \usepackage{indentfirst}
+    # \setlength{\\parindent}{2em}
+    # \setCJKmainfont{UKai}	#
+    # \setCJKmonofont[Scale=0.9]{UKai}
+    # \setCJKfamilyfont{song}{UKai}
+    # \XeTeXlinebreakskip = 0pt plus 1pt
+    # \setcounter{tocdepth}{2} #
+    # \setcounter{secnumdepth}{0}
+    # ''',
+    # 'classoptions': ',oneside'
+    'fncychap': ' ',
+
 
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+
+    # 'printindex': r'\footnotesize\raggedright\printindex'
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -229,22 +251,22 @@ todo_include_todos = True
 
 latex_engine = 'xelatex'
 latex_elements = {
-        # The paper size ('letterpaper' or 'a4paper').
-        #
-        # 'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    # 'papersize': 'letterpaper',
 
-        # The font size ('10pt', '11pt' or '12pt').
-        #
-        # 'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    # 'pointsize': '10pt',
 
-        'fncychap' : '',
+    'fncychap' : '',
 
-        # Additional stuff for the LaTeX preamble.
-        #
-        'preamble': r'''\usepackage{ctex}
-        ''',
+    # Additional stuff for the LaTeX preamble.
+    #
+    'preamble': r'''\usepackage{ctex}
+    ''',
 
-        # Latex figure (float) alignment
-        #
-        # 'figure_align': 'htbp',
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
 }
