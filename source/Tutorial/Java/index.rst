@@ -5,7 +5,6 @@ Java
    :maxdepth: 1
    :caption: 样例和运行
    :name: tutorialjava
-   :numbered:
    
    javabasic.rst
    javabasicUi.rst

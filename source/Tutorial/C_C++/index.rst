@@ -3,7 +3,6 @@ C/C++
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
    :caption: 样例和生成
    :name: tutorialc
 

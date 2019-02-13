@@ -9,7 +9,6 @@ ROS包中主要包括了ros系统对smarttof API的封装，
 .. toctree::
    :maxdepth: 1
    :name: tof-Tutorial
-   :numbered:
    
    linuxros.rst
    rosgray.rst

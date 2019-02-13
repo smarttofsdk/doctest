@@ -3,11 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to smarttof's documentation!
+Welcome to SmartToF SDK User Guide!
 ====================================
 
 .. toctree::
    :maxdepth: 3
+   :caption: SmartToF SDK User Guide
 
 .. _sec-general:
 
@@ -15,8 +16,11 @@ Welcome to smarttof's documentation!
 ------------------
 
 .. toctree::
+   :caption: 介绍(Introduction)
+   :titlesonly:
 
-   Introduction/index.rst
+   Introduction/概述.rst
+   Introduction/基本开发流程.rst
    
 .. _sec-start:
 
@@ -24,15 +28,22 @@ Welcome to smarttof's documentation!
 ---------------------
 
 .. toctree::
+   :caption: 快速入门(Quick Start)
+   :titlesonly:
 
-   GettingStart/index.rst
-   
+   GettingStart/配置说明.rst
+   GettingStart/SDK安装.rst
+   GettingStart/工具使用.rst  
+
 .. _sec-tutorial:
 
 教程(Tutorial)
 ---------------------
 
 .. toctree::
+   :caption: 教程(Tutorial)
+   :titlesonly:
+
 
    Tutorial/C_C++/index.rst
    Tutorial/Python/index.rst
@@ -48,6 +59,8 @@ Welcome to smarttof's documentation!
 ---------------------
 
 .. toctree::
+   :caption: 详细参考(Reference)
+   :titlesonly:
 
    Reference/tools/index.rst
    Reference/C_C++/index.rst
