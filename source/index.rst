@@ -72,13 +72,12 @@ Welcome to SmartToF SDK User Guide!
    Reference/ROS/index.rst 
    Reference/OpenNI2/index.rst
    
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-
-.. :ref:`search`   
-.. :ref:`modindex`
+.. * :ref:`genindex`
+.. * :ref:`search`   
+.. * :ref:`modindex`
 
 
 
