@@ -45,7 +45,7 @@ SmartToFViewer支持录像功能，录制的视频文件可以作为离线算法
 
   - 使能模式下，如果用NiViewer播放录像文件时，输出深度图和灰度图
   
-  - 不能模式下，用NiViewer播放录像文件时，输出4DCS的原始图像。
+  - 不使能模式下，用NiViewer播放录像文件时，输出4DCS(tof芯片的raw数据)的原始图像。
 
 
 .. image:: imageG/win_V7.jpg
@@ -84,5 +84,5 @@ dmcam-cli通常通过命令行参数方式、脚本文件方式、交互模式�
 
 .. image:: imageG/win_V9.jpg
 
-dmcam-cli的其他具体功能介绍请参考详细参考中的SDK工具详细说明。
+dmcam-cli的其他具体功能介绍请参考 :ref:`sec-reference` 中SDK工具详细说明。
 
