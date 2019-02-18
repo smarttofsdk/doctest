@@ -9,7 +9,7 @@ sample_filer样例主要展示了使能模组滤波功能的相关使能设置�
 .. image:: imageC/win_C7.jpg
 
 开启滤波功能调用的主要API为dmcam_filter_enable,进行滤波功能设置时，有些需要
-设置参数值，详细参考Reference中C/C++核心库中的模组参数和滤波类型说明以及代码示例。
+设置参数值，详细参考 :ref:`doc_param` 模组参数和滤波类型说明以及代码示例。
 
 
 

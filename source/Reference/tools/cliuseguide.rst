@@ -20,9 +20,9 @@ SDK中的dmcam-cli工具是方便用户在二次开发时进行诊断和测试�
 
 dmcam-cli可以通过命令行与硬件设备进行交互，一般通过下面三种方式使用：
 
-* 命令行参数方式：具体参数定义参见表2-1
-* 脚本文件方式: 参见表 2 1 中‘-s, --script <file>’选项。
-* 交互模式：参见表 2 1 中’-i, --interactive’选项，默认启动进入交互模式。
+* 命令行参数方式：具体参数定义参见下面 :ref:`doc-cmd`
+* 脚本文件方式: 参见 :ref:`doc-cmd` 中‘-s, --script <file>’选项。
+* 交互模式：参见 :ref:`doc-cmd` 中’-i, --interactive’选项，默认启动进入交互模式。
 
 下图是命令行参数模式和交互模式的参考使用截图
 
@@ -31,13 +31,16 @@ dmcam-cli可以通过命令行与硬件设备进行交互，一般通过下面�
 .. tip::
     在windows下，直接双击运行dmcam-cli.exe,默认进入交互模式。
 	
+	
+.. _doc-cmd:
+
 详细命令
 ====================
 
-下表2-1列出了dmcam所有的命令和参数，并展示了样例的基本使用方法。更详细的说明可输入--help和--help-interactive参数进行查看。
+下表列出了dmcam所有的命令和参数，并展示了样例的基本使用方法。更详细的说明可输入--help和--help-interactive参数进行查看。
 
-.. list-table:: 表2-1 命令列表
-	:widths: auto
+.. list-table:: 命令列表
+	:widths: 20 30 25 25
 	:header-rows: 1
 	
 	* - Script mode functions

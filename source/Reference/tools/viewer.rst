@@ -1,3 +1,5 @@
+.. _doc-smarttofviewer:
+
 SmartToFViewer使用说明
 +++++++++++++++++++++++
 

@@ -14,7 +14,7 @@ SmartToF中的所有相关的参数设置和滤波功能的使用都通过smartt
 下表列出了property的属性ID:
 
 .. list-table::
-	:widths: 60 60
+	:widths: auto
 	:header-rows: 1
 	
 	* - 功能ID

@@ -2,7 +2,7 @@
 =======================
 
 运行Python样例需要安装对应Python版本的dmcam包、
-numpy、matplotlib、pygame、Pyqtgraph等包。
+numpy、matplotlib、pygame、Pyqtgraph等包。其中dmcam包是SmartToF模组设备相关的驱动包，已上传pypi网站。
 
 运行python样例相关包的安装
 ------------------------------

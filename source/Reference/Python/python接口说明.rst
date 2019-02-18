@@ -85,12 +85,12 @@ Python中的模组API和C库中 **dmcam.h** 中定义的API基本一一对应。
        dmcam.cap_config_set(dev, cap_cfg)
        
        dmcam.cap_set_callback_on_frame_ready(dev, on_frame_rdy)
-       dmcam.cap_set_callback_on_error(dev, on_cap_err
+       dmcam.cap_set_callback_on_error(dev, on_cap_err)
 
   
 下表列出了一些常用的API接口对比：
 
-.. list-table::
+.. list-table:: python调用接口对比
 	:widths: 60 60
 	:header-rows: 1
 	
