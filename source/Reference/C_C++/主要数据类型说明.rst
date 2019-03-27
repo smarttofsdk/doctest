@@ -98,55 +98,6 @@ SmartToF中主要通过模组参数设置和滤波功能设置来控制模组采
 模组滤波类型说明
 ++++++++++++++++++
 
-模组滤波类型包括深度滤波、幅值滤波、自动曝光、运动模式等，具体
-定义如下::
-
-	typedef enum {
-		DMCAM_FILTER_ID_LEN_CALIB,    /**>lens calibration*/
-		DMCAM_FILTER_ID_PIXEL_CALIB,  /**>pixel calibration*/
-		DMCAM_FILTER_ID_MEDIAN,       /**>Median filter for distance data*/
-		DMCAM_FILTER_ID_RESERVED,        /**>Gauss filter for distance data*/
-		DMCAM_FILTER_ID_AMP,          /**>Amplitude filter control*/
-		DMCAM_FILTER_ID_AUTO_INTG,    /**>auto integration filter enable : use sat_ratio to adjust */
-		DMCAM_FILTER_ID_SYNC_DELAY,   /**> sync delay */
-		DMCAM_FILTER_ID_TEMP_MONITOR, /**>temperature monitor */
-		DMCAM_FILTER_ID_HDR,          /**>HDR mode */
-		DMCAM_FILTER_ID_OFFSET,       /**> set offset for calc distance */
-		DMCAM_FILTER_ID_SPORT_MODE,   /**> set sport mode */
-		//-------------------
-		DMCAM_FILTER_CNT,
-	}dmcam_filter_id_e;
-	
-.. list-table:: 模组滤波类型说明
-	:widths: 60 60
-	:header-rows: 1
-	
-	* - 滤波功能ID
-	  - 说明
-	* - DMCAM_FILTER_ID_LEN_CALIB
-	  - 镜头校准ID
-	* - DMCAM_FILTER_ID_PIXEL_CALIB
-	  - 像素校准ID
-	* - DMCAM_FILTER_ID_MEDIAN
-	  - 深度滤波ID
-	* - DMCAM_FILTER_ID_AMP
-	  - 最小幅值滤波ID
-	* - DMCAM_FILTER_ID_AUTO_INTG
-	  - 自动曝光ID
-	* - DMCAM_FILTER_ID_SYNC_DELAY
-	  - 软件多模组串扰ID
-	* - DMCAM_FILTER_ID_HDR
-	  - HDR功能ID	  
-	* - DMCAM_FILTER_ID_OFFSET
-	  - 距离偏移功能ID
-	* - DMCAM_FILTER_ID_SPORT_MODE
-	  - 运动模式功能ID
-	    非运动模式:全分辨率，4xDCS,18ms模糊
-	    运动模式0：垂直分辨率减半，4xDCS,6ms模糊
-	    运动模式1：垂直分辨率减半，2xDCS,无模糊,噪声高(竖条纹)
-	    运动模式2：全分辨率，2xDCS,6ms模糊，噪声高(竖条纹)	
-		
-
 TC/TCM-E3是专门满足高帧率应用的模组，最高帧率可达120帧，运动模式是为了消除运动模糊影响，他们的
 关系如下表
 
@@ -195,7 +146,56 @@ TC/TCM-E3是专门满足高帧率应用的模组，最高帧率可达120帧，�
 	  - fps*4
 	  - 0ms
 	  - 垂直分辨率减半：320*120(输出差值320*240)
-	  - 精度减半(2*DCS计算)		
+	  - 精度减半(2*DCS计算)	
+
+模组滤波类型包括深度滤波、幅值滤波、自动曝光、运动模式等，具体
+定义如下::
+
+	typedef enum {
+		DMCAM_FILTER_ID_LEN_CALIB,    /**>lens calibration*/
+		DMCAM_FILTER_ID_PIXEL_CALIB,  /**>pixel calibration*/
+		DMCAM_FILTER_ID_MEDIAN,       /**>Median filter for distance data*/
+		DMCAM_FILTER_ID_RESERVED,        /**>Gauss filter for distance data*/
+		DMCAM_FILTER_ID_AMP,          /**>Amplitude filter control*/
+		DMCAM_FILTER_ID_AUTO_INTG,    /**>auto integration filter enable : use sat_ratio to adjust */
+		DMCAM_FILTER_ID_SYNC_DELAY,   /**> sync delay */
+		DMCAM_FILTER_ID_TEMP_MONITOR, /**>temperature monitor */
+		DMCAM_FILTER_ID_HDR,          /**>HDR mode */
+		DMCAM_FILTER_ID_OFFSET,       /**> set offset for calc distance */
+		DMCAM_FILTER_ID_SPORT_MODE,   /**> set sport mode */
+		//-------------------
+		DMCAM_FILTER_CNT,
+	}dmcam_filter_id_e;
+	
+.. list-table:: 模组滤波类型说明
+	:widths: 60 60
+	:header-rows: 1
+	
+	* - 滤波功能ID
+	  - 说明
+	* - DMCAM_FILTER_ID_LEN_CALIB
+	  - 镜头校准ID
+	* - DMCAM_FILTER_ID_PIXEL_CALIB
+	  - 像素校准ID
+	* - DMCAM_FILTER_ID_MEDIAN
+	  - 深度滤波ID
+	* - DMCAM_FILTER_ID_AMP
+	  - 最小幅值滤波ID
+	* - DMCAM_FILTER_ID_AUTO_INTG
+	  - 自动曝光ID
+	* - DMCAM_FILTER_ID_SYNC_DELAY
+	  - 软件多模组串扰ID
+	* - DMCAM_FILTER_ID_HDR
+	  - HDR功能ID	  
+	* - DMCAM_FILTER_ID_OFFSET
+	  - 距离偏移功能ID
+	* - DMCAM_FILTER_ID_SPORT_MODE
+	  - 运动模式功能ID
+	    非运动模式:全分辨率，4xDCS,18ms模糊
+	    运动模式0：垂直分辨率减半，4xDCS,6ms模糊
+	    运动模式1：垂直分辨率减半，2xDCS,无模糊,噪声高(竖条纹)
+	    运动模式2：全分辨率，2xDCS,6ms模糊，噪声高(竖条纹)	
+			
 	
 	
 	
